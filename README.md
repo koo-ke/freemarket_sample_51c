@@ -24,4 +24,4 @@ Things you may want to cover:
 
 * Services (job queues, cache servers, search engines, etc.)
 
-* Deployment instructions
+向川英孝　城戸隆文
