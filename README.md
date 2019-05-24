@@ -25,5 +25,3 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
-
-* 城戸追記
