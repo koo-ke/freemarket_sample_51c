@@ -11,6 +11,9 @@ Things you may want to cover:
 
 * System dependencies
 
+* 城戸追記
+
+
 * Configuration
 
 * Database creation
@@ -22,8 +25,3 @@ Things you may want to cover:
 * Services (job queues, cache servers, search engines, etc.)
 
 * Deployment instructions
-
-* ...
-aaa
-
-
