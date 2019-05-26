@@ -5,7 +5,7 @@ Usersテーブル
 |Column|Type|Options|
 |------|----|-------|
 |ID|||
-|e-mail|string|null: false unique: true|
+|e-mail|string|null: false, unique: true|
 |pass|string|null: false|
 |family_name|string|null: false|
 |first_name|string|null: false
@@ -49,9 +49,9 @@ Productsテーブル
 |nego_status|integer|null: false, default: 0|
 |text|text|null: false|
 |size|string|null: false, default: 0|
-|item_staus|string|null: false|
+|item_status|integer|null: false|
 |shipping_charges|string|null: false|
-|shipping_origun_area|string|null: false|
+|shipping_origin_area|string|null: false|
 |days_to_ship|string|null: false|
 |saler_id|references|null: false, foreign_key: true|
 |buyer_id|references|null: false, foreign_key: true|
