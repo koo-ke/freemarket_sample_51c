@@ -125,7 +125,6 @@ Likesテーブル
 |Column|Type|Options|
 |------|----|-------|
 |ID|||
-|like|integer|null: false|
 |user_id|references|null: false, foreign_key: true|
 |product_id|references|null: false, foreign_key: true|
 
