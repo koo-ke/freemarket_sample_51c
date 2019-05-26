@@ -67,7 +67,7 @@ Productsテーブル
 |ID|||
 |name|string|null: false, index: true|
 |text|text|null: false|
-|status_id|references||
+|status_id|references|null: false, foreign_key: true|
 |strategy_id|references|null: false, foreign_key: true|
 
 ### Association
@@ -93,10 +93,10 @@ Brandsテーブル
 Imagesテーブル
 
 |Column|Type|Options|
-|------|----|-------|
+|------|----|-------|1
 |ID|||
 |image|string|null: false|
-|product_id|references|null: false|foreign_key: true|
+|product_id|references|null: false, foreign_key: true|
 
 ### Association
 - belongs_to :product
@@ -150,7 +150,7 @@ Insalesテーブル
 |Column|Type|Options|
 |------|----|-------|
 |ID|||
-|product_id|references|null: false|foreign_key: true|
+|product_id|references|null: false, foreign_key: true|
 
 ### Association
 has_many :likes
@@ -176,5 +176,5 @@ Soldsテーブル
 |Column|Type|Options|
 |------|----|-------|
 |ID|||
-|product_id|references|null: false|foreign_key: true|
+|product_id|references|null: false, foreign_key: true|
 |user_id|references|null: false, foreign_key: true|
