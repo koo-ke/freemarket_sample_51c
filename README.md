@@ -14,11 +14,9 @@ Usersテーブル
 |nickname|string|null: false|
 |profile_text|text||
 
-
 ### Association
 - has_many :products
-- has_many :evaluations
-
+- has_one :address
 
 
 
@@ -34,6 +32,8 @@ Addressesテーブル
 |building|string||
 |user_id|references|null: false, foreign_key: true|
 
+### Association
+- sbelongs_to :user
 
 
 
@@ -44,18 +44,21 @@ Productsテーブル
 |ID|||
 |name|string|null: false, index: true|
 |price|integer|null: false|
+|status|integer|null: false, default: 0|
 |text|text|null: false|
 |size|string|null: false, default: 0|
 |item_staus|string|null: false|
 |shipping_charges|string|null: false|
 |shipping_origun_area|string|null: false|
 |days_to_ship|string|null: false|
+|user_id|references|null: false, foreign_key: true|
+
 
 ### Association
 - has_many :categories,  through: :products_categories
 - has_many :products_categories
 - belongs_to :user
-
+- has_many :likes
 
 
 Brandsテーブル
@@ -86,7 +89,6 @@ Imagesテーブル
 
 
 
-
 Products_categories(商品の中間テーブル)
 
 |Column|Type|Options|
@@ -96,8 +98,8 @@ Products_categories(商品の中間テーブル)
 |category_id|references|null: false, foreign_key: true|
 
 ### Association
-- belongs_to :products
-- belongs_to :categories
+- belongs_to :product
+- belongs_to :category
 
 
 
@@ -115,17 +117,6 @@ Categoriesテーブル
 
 
 
-Insalesテーブル
-
-|Column|Type|Options|
-|------|----|-------|
-|ID|||
-|product_id|references|null: false, foreign_key: true|
-
-### Association
-has_many :likes
-
-
 
 Likesテーブル
 
@@ -134,7 +125,7 @@ Likesテーブル
 |ID|||
 |like|integer|null: false|
 |user_id|references|null: false, foreign_key: true|
-|insale_id|references|null: false, foreign_key: true|
+|product_id|references|null: false, foreign_key: true|
 
 ### Association
 - belongs_to :insale
