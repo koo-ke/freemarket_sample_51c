@@ -21,15 +21,6 @@ Usersテーブル
 
 
 
-Addressesテーブル
-
-|Column|Type|Options|
-|------|----|-------|
-|ID|||
-|address|string||
-|user_id|references|null: false, foreign_key: true|
-
-
 
 Addressesテーブル
 
@@ -43,20 +34,6 @@ Addressesテーブル
 |building|string||
 |user_id|references|null: false, foreign_key: true|
 
-
-
-Evaluationsテーブル
-
-|Column|Type|Options|
-|------|----|-------|
-|ID|||
-|like|integer||
-|normal|integer||
-|bad|integer||
-|user_id|references|null: false, foreign_key: true|
-
-### Association
-- belongs_to :user 
 
 
 
