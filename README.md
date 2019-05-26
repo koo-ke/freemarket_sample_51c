@@ -16,9 +16,9 @@ Usersテーブル
 
 ### Association
 - has_one :address
-- has_many :buyed_items, foreign_key: "buyer_id", class_name: "Item"
-- has_many :saling_items, -> { where("buyer_id is NULL") }, foreign_key: "saler_id", class_name: "Item"
-- has_many :sold_items, -> { where("buyer_id is not NULL") }, foreign_key: "saler_id", class_name: "Item"
+- has_many :buyed_products, foreign_key: "buyer_id", class_name: "Products"
+- has_many :saling_products, -> { where("buyer_id is NULL") }, foreign_key: "saler_id", class_name: "Products"
+- has_many :sold_products, -> { where("buyer_id is not NULL") }, foreign_key: "saler_id", class_name: "Products"
 
 
 
@@ -46,14 +46,14 @@ Productsテーブル
 |ID|||
 |name|string|null: false, index: true|
 |price|integer|null: false|
-|status|integer|null: false, default: 0|
+|nego_status|integer|null: false, default: 0|
 |text|text|null: false|
 |size|string|null: false, default: 0|
 |item_staus|string|null: false|
 |shipping_charges|string|null: false|
 |shipping_origun_area|string|null: false|
 |days_to_ship|string|null: false|
-|seller_id|references|null: false, foreign_key: true|
+|saler_id|references|null: false, foreign_key: true|
 |buyer_id|references|null: false, foreign_key: true|
 
 ### Association
