@@ -15,8 +15,10 @@ Usersテーブル
 |profile_text|text||
 
 ### Association
-- has_many :products
 - has_one :address
+- has_many :buyed_items, foreign_key: "buyer_id", class_name: "Item"
+- has_many :saling_items, -> { where("buyer_id is NULL") }, foreign_key: "saler_id", class_name: "Item"
+- has_many :sold_items, -> { where("buyer_id is not NULL") }, foreign_key: "saler_id", class_name: "Item"
 
 
 
@@ -33,7 +35,7 @@ Addressesテーブル
 |user_id|references|null: false, foreign_key: true|
 
 ### Association
-- sbelongs_to :user
+- belongs_to :user
 
 
 
@@ -51,14 +53,17 @@ Productsテーブル
 |shipping_charges|string|null: false|
 |shipping_origun_area|string|null: false|
 |days_to_ship|string|null: false|
-|user_id|references|null: false, foreign_key: true|
-
+|seller_id|references|null: false, foreign_key: true|
+|buyer_id|references|null: false, foreign_key: true|
 
 ### Association
 - has_many :categories,  through: :products_categories
 - has_many :products_categories
-- belongs_to :user
 - has_many :likes
+- has_many :images
+- belongs_to :brand
+- belongs_to :saler, class_name: "User"
+- belongs_to :buyer, class_name: "User"
 
 
 Brandsテーブル
@@ -77,15 +82,13 @@ Brandsテーブル
 Imagesテーブル
 
 |Column|Type|Options|
-|------|----|-------|1
+|------|----|-------|
 |ID|||
 |image|string|null: false|
 |product_id|references|null: false, foreign_key: true|
 
 ### Association
 - belongs_to :product
-
-
 
 
 
@@ -117,7 +120,6 @@ Categoriesテーブル
 
 
 
-
 Likesテーブル
 
 |Column|Type|Options|
@@ -128,14 +130,5 @@ Likesテーブル
 |product_id|references|null: false, foreign_key: true|
 
 ### Association
-- belongs_to :insale
-
-
-
-Soldsテーブル
-
-|Column|Type|Options|
-|------|----|-------|
-|ID|||
-|product_id|references|null: false, foreign_key: true|
-|user_id|references|null: false, foreign_key: true|
+- belongs_to :user
+- belongs_to :product
