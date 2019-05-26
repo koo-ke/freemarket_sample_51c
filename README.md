@@ -7,12 +7,17 @@ Usersテーブル
 |ID|||
 |e-mail|string|null: false unique: true|
 |pass|string|null: false|
-|nickname|string|null:false|
+|family_name|string|null: false|
+|first_name|string|null: false
+|family_name_kana|string|null: false|
+|first_name_kana|string|null:false|
+|nickname|string|null: false|
 |profile_text|text||
 
+
 ### Association
-has_many :products
-has_many :evaluations
+- has_many :products
+- has_many :evaluations
 
 
 
@@ -24,6 +29,19 @@ Addressesテーブル
 |address|string||
 |user_id|references|null: false, foreign_key: true|
 
+
+
+Addressesテーブル
+
+|Column|Type|Options|
+|------|----|-------|
+|ID|||
+|postal_code|integer||
+|prefecture|string||
+|city|string||
+|address|string||
+|building|string||
+|user_id|references|null: false, foreign_key: true|
 
 
 
@@ -38,7 +56,7 @@ Evaluationsテーブル
 |user_id|references|null: false, foreign_key: true|
 
 ### Association
-belongs_to :user 
+- belongs_to :user 
 
 
 
@@ -53,10 +71,34 @@ Productsテーブル
 |strategy_id|references|null: false, foreign_key: true|
 
 ### Association
-has_many :categories,  through: :products_categories
-has_many :products_categories
-belongs_to :user
+- has_many :categories,  through: :products_categories
+- has_many :products_categories
+- belongs_to :user
 
+
+
+Brandsテーブル
+
+|Column|Type|Options|
+|------|----|-------|
+|​ID|||
+|name|string||
+|ancestry|string|index: true|
+
+### Association
+- has_many :products
+
+
+
+Imagesテーブル
+|Column|Type|Options|
+|------|----|-------|
+|ID|||
+|image|string|null: false|
+|product_id|references|null: false|foreign_key: true|
+
+### Association
+- belongs_to :product
 
 
 Statusテーブル
@@ -64,9 +106,7 @@ Statusテーブル
 |Column|Type|Options|
 |------|----|-------|
 |ID|||
-|image|string|null: false|
 |size|string|null: false|
-|brand|string||
 |item_staus|string|null: false|
 |shipping_charges|string|null: false|
 |shipping_origun_area|string|null: false|
@@ -85,8 +125,8 @@ Products_categories(商品の中間テーブル)
 |category_id|references|null: false, foreign_key: true|
 
 ### Association
-belongs_to :products
-belongs_to :categories
+- belongs_to :products
+- belongs_to :categories
 
 
 
@@ -99,8 +139,8 @@ Categoriesテーブル
 |ancestry|string|null: false, index: true|
 
 ### Association
-​has_many :products, through: :products_categories
-has_many :products_categories
+- has_many :products,  through: :products_categories
+- has_many :products_categories
 
 
 
@@ -126,7 +166,7 @@ Likesテーブル
 |insale_id|references|null: false, foreign_key: true|
 
 ### Association
-belongs_to :insale
+- belongs_to :insale
 
 
 
