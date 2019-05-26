@@ -46,7 +46,7 @@ Productsテーブル
 |ID|||
 |name|string|null: false, index: true|
 |price|integer|null: false|
-|nego_status|integer|null: false, default: 0|
+|publish_status|integer|null: false, default: 0|
 |text|text|null: false|
 |size|string|null: false, default: 0|
 |item_status|integer|null: false|
