@@ -27,10 +27,10 @@ Addressesテーブル
 |Column|Type|Options|
 |------|----|-------|
 |ID|||
-|postal_code|integer||
-|prefecture|string||
-|city|string||
-|address|string||
+|postal_code|integer|null: false|
+|prefecture|string|null: false|
+|city|string|null: false|
+|address|string|null: false|
 |building|string||
 |user_id|references|null: false, foreign_key: true|
 
@@ -43,9 +43,13 @@ Productsテーブル
 |------|----|-------|
 |ID|||
 |name|string|null: false, index: true|
+|price|integer|null: false|
 |text|text|null: false|
-|status_id|references|null: false, foreign_key: true|
-|strategy_id|references|null: false, foreign_key: true|
+|size|string|null: false, default: 0|
+|item_staus|string|null: false|
+|shipping_charges|string|null: false|
+|shipping_origun_area|string|null: false|
+|days_to_ship|string|null: false|
 
 ### Association
 - has_many :categories,  through: :products_categories
@@ -79,17 +83,6 @@ Imagesテーブル
 - belongs_to :product
 
 
-Statusテーブル
-
-|Column|Type|Options|
-|------|----|-------|
-|ID|||
-|size|string|null: false|
-|item_staus|string|null: false|
-|shipping_charges|string|null: false|
-|shipping_origun_area|string|null: false|
-|days_to_ship|string|null: false|
-|price|integer|null: false|
 
 
 
