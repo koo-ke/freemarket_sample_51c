@@ -69,3 +69,7 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 group :production do
   gem 'unicorn', '5.4.1'
 end
+
+gem 'mini_magick', '~> 4.8'
+gem "aws-sdk-s3", require: false
+gem "figaro", "~> 1.1.1"
