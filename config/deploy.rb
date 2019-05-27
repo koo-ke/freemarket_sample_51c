@@ -4,6 +4,12 @@ lock "~> 3.11.0"
 set :application, 'freemarket_sample_51c'
 set :repo_url,  'git@github.com:koo-ke/freemarket_sample_51c.git'
 
+set :default_env, {
+  BASIC_AUTH_USER: ENV["BASIC_AUTH_USER"],
+  BASIC_AUTH_PASSWORD: ENV["BASIC_AUTH_PASSWORD"]
+}
+
+
 set :linked_dirs, fetch(:linked_dirs, []).push('log', 'tmp/pids', 'tmp/cache', 'tmp/sockets', 'vendor/bundle', 'public/system', 'public/uploads')
 
 set :rbenv_type, :user
