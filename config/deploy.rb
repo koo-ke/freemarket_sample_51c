@@ -5,6 +5,8 @@ set :application, 'freemarket_sample_51c'
 set :repo_url,  'git@github.com:koo-ke/freemarket_sample_51c.git'
 
 set :default_env, {
+  rbenv_root: "usr/local/rbenv",
+  path: "usr/local/rbenv/shims:/usr/local/rbenv/bin:$PATH",
   BASIC_AUTH_USER: ENV["BASIC_AUTH_USER"],
   BASIC_AUTH_PASSWORD: ENV["BASIC_AUTH_PASSWORD"]
 }
