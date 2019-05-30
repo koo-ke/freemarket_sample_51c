@@ -1,0 +1,12 @@
+.profile_content
+  .profile_content__profile プロフィール
+  %form{action: "/", method: "POST"}
+    .back_ground_image
+      .setting_profile
+        %img.setting_profile__icon{src: "//static.mercdn.net/images/member_photo_noimage_thumb.png"}/
+        %input.setting_profile__name{placeholder: "例)AYA☆セール中"}
+      .textarea
+        %textarea.textarea__view{placeholder: "例）こんにちは☆ ご覧いただきありがとうございます！かわいいものやきれいめオフィスカジュアル中心に出品しています。服のサイズは主に9号です。気持ちよくお取引できるよう心がけていますので、商品や発送方法などご質問がありましたらお気軽にどうぞ♪"}
+        %input{type: "hidden"}/
+      %button.submit_btn{type: "submit"} 変更する
+      
