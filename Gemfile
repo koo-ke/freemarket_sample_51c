@@ -76,3 +76,6 @@ gem 'mini_magick', '~> 4.8'
 gem "aws-sdk-s3", require: false
 gem "figaro", "~> 1.1.1"
 gem 'devise'
+gem 'haml-rails'
+gem 'erb2haml'
+gem 'font-awesome-rails'
