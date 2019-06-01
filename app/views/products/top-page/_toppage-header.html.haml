@@ -1,0 +1,41 @@
+.container
+  %header
+    .header-contents
+      .inner-header
+        .header-top
+          %h1.header-top__logo
+            = image_tag '//www-mercari-jp.akamaized.net/assets/img/common/common/logo.svg?1204800476', alt: 'mercari', width: '134', height: '36'
+          %form
+            %input.header-top__form{ type: 'search', name: 'keyword', placeholder: '何かお探しですか？'}
+            %li.list
+              = link_to '#', class: 'icon1' do
+                = fa_icon 'search'
+        .header-clearfix
+        .header-bottom
+          .header-bottom__left
+            %h2
+              = link_to '#', class: 'header-navi-category' do
+                %li.list
+                  = link_to do
+                    = fa_icon 'list-ul', class: 'icon2'
+                    %span.header-bottom__category カテゴリーから探す
+          .header-bottom__center
+            %h2
+              =link_to '#', class: 'header-navi-brand' do
+                %li.list
+                  = link_to do
+                    = fa_icon 'tag', class: 'icon3'
+                    %span.header-bottom__brand ブランドから探す
+          .header-notification
+            = link_to '#' do
+              = fa_icon 'bell', class: 'icon4' 
+              %span.header-bottom__notification お知らせ
+          .header-todo
+            = link_to '#' do
+              =fa_icon 'check', class: 'icon5'
+              %span.header-bottom__todo やることリスト
+          .header-mypage
+            = link_to '#' do
+              = image_tag '//static.mercdn.net/images/member_photo_noimage_thumb.png', class: 'header-mypage-image', src: "", width: "32", height: "32"
+              %span.header-bottom__mypage マイページ
+              
