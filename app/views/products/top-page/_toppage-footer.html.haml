@@ -5,13 +5,13 @@
         %h2.app-banner-pc-inner__top-logo スマホでかんたんフリマアプリ
         %p.app-banner-pc-inner__bottom-logo 今すぐ無料ダウンロード！
         .app-banner__iconleft
-          %img.app-banner-icon-mercari{ src: '/jp/assets/img/common/jp/top/download_bg_pc.jpg?17794984', width: '68'}
+          = image_tag '/jp/assets/img/common/jp/top/download_bg_pc.jpg?17794984', class: 'app-banner-icon-mercari', width: '68'
           %ul.app-banner__iconright
             %li
-              %img{ src: '//www-mercari-jp.akamaized.net/assets/img/common/common/app-store.svg?2399382397', width: '133', height: '40'}
-              %img{ src: '//www-mercari-jp.akamaized.net/assets/img/common/common/google-play.svg?2399382397', width: '133', height: '40'}
+              = image_tag '//www-mercari-jp.akamaized.net/assets/img/common/common/app-store.svg?2399382397', width: '133', height: '40'
+              =image_tag '//www-mercari-jp.akamaized.net/assets/img/common/common/google-play.svg?2399382397', width: '133', height: '40'
       %figure
-        %img.app-banner__topphoto{ src: '//www-mercari-jp.akamaized.net/assets/img/common/jp/download_content_pc.png?2399382397', width: '300', height: '260'}
+        = image_tag '//www-mercari-jp.akamaized.net/assets/img/common/jp/download_content_pc.png?2399382397', class:'app-banner__topphoto', width: '300', height: '260'
 %footer
   .grobal-footer
     .grobal-footer__contents
@@ -59,7 +59,7 @@
             %li United States
     .grobal-footer-bottom
       .grobal-footer-bottom__logo
-        %img{ src: '//www-mercari-jp.akamaized.net/assets/img/common/common/logo-white.svg?2399382397', width: '124', height: '33'}
+        = image_tag '//www-mercari-jp.akamaized.net/assets/img/common/common/logo-white.svg?2399382397', width: '124', height: '33'
         %span.grobal-footer__copyright
           %small ©️ 2019Mercari
   = link_to '#', class: 'grobal-footer-sell-btn' do
