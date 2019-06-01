@@ -136,4 +136,32 @@
       margin: 0 auto;
     }
   }
+
+  .logout_content {
+    background-color: #fff;
+    float: right;
+    height: 188px;
+    width: 700px;
+    position: relative;
+    &__logout_btn {
+      width: 318px;
+      height: 48px;
+      background: #ea352d;
+      border: 1px solid #ea352d;
+      color: #fff;
+      text-decoration: none;
+      line-height: 48px;
+      font-size: 14px;
+      border: 1px solid transparent;
+      cursor: pointer;
+      text-align: center;
+      margin: auto;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      left: 0;
+    }
+  }
+
 }
