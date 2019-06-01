@@ -1,0 +1,55 @@
+.purchasing-top
+  %header.single--header
+  .single-main__container
+    %h2.single-main__container__head 購入内容の確認
+    .purchase-content
+      .purchase-content__inner
+        %h3.purchase-content__inner--image
+          %img.lazyload{alt: "", "data-src": "m74984987358_1", height: "148", width: "112"}/
+        %p.purchase-content__inner--name ２つ折り財布
+        %form.buy-form
+          %p.purchase-content__inner--price
+            ¥ 999
+            %span.purchase-content__inner--shippingfee 送料込み
+          %ul.accordion
+            .accordion__toggle
+              ポイントはありません
+          .buy-price-table
+            .buy-price-table__row
+              .buy-price-table__row--text 支払い金額
+              .buy-price-table__row--cell
+                %span ¥ 999
+          .purchasing-btn{type: "submit"} 
+            = link_to root_path do
+              購入する
+
+    %section.userinfo-content
+      .userinfo-content__inner
+        %h3 配送先
+        %address.userinfo-content__inner--text
+          〒556-0026
+          %br/
+          大阪府 大阪市浪速区浪速西
+          2-12-16
+          %br/
+          城戸 隆文
+        %a.userinfo-content__inner--userinfofix{href: "/"}
+          .userinfo-content--btn
+            = link_to root_path do
+              %span 変更する
+              %i.fa.fa-chevron-right
+    %section.userinfo-content
+      .userinfo-content__inner
+        %h3 支払い方法
+        %p.userinfo-content__inner--text
+          ************3101
+          %br/
+          02 / 21
+          .userinfo-content--figure
+            = image_tag "jcb.svg", height: "20", width: "26"
+        %a.userinfo-content__inner--userinfofix
+          .userinfo-content--btn
+            = link_to root_path do
+              %span 変更する
+              %i.fa.fa-chevron-right
+  %footer.single-footer
