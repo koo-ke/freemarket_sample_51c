@@ -5,7 +5,7 @@
       .creditcard_list_content__title
         .creditcard_list_content__title--text クレジットカード一覧
       .creditcard_list
-        %img{alt: "visa", height: "15", src: "//www-mercari-jp.akamaized.net/assets/img/card/visa.svg?3856598694", width: "49"}/
+        = image_tag "//www-mercari-jp.akamaized.net/assets/img/card/visa.svg?3856598694", size: "49x15", alt: "visa"
         .creditcard_list__num ************0000
         .creditcard_list__num 00 / 00
         %button.settings-payment-remove{type: "submit"}
