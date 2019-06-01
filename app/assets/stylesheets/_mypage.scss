@@ -402,4 +402,142 @@
         text-decoration: none;
       }
     }
+
+    .mypage_content {
+      width: 700px;
+      float: right;
+      .mypage_backg_round {
+        height: 200px;
+        background-image: url('user-bg.jpg');
+        &__image {
+          width: 700px;
+          height: 111px;
+          padding:45px 0px;
+          text-align: center;
+        }
+        .mypage_link {
+          text-decoration: none;
+        }
+        .bold {
+          font-size: 12px;
+          margin:0 8px 8px;
+          font-weight: bold;
+          color: #333;
+        }
+        .mypage-number {
+          font-size: 13px;
+          color: #333;
+        }
+        .icon {
+          height: 60px;
+          width: 60px;
+          border-radius: 50%;
+        }
+      }
+      .notice {
+        height: 382px;
+        width: 700px;
+        background:#fff;
+        &__title {
+          height: 72px;
+          padding: 0 16px;
+          background: #fafafa;
+          font-size: 16px;
+          line-height: 72px;
+          font-weight: bold;
+        }
+        &__during_trading {
+          float: left;
+          width: 350px;
+          height: 72px;
+          background:#fff;
+          border-top: 2px solid #ea352d;
+          text-align: center;
+          line-height: 70px;
+          font-weight: bold;
+        }
+        &__past_transactions {
+          float: right;
+          width: 350px;
+          height: 72px;
+          background:#eee;
+          text-align: center;
+          line-height: 72px;
+          font-weight: bold;
+        }
+        &__margin {
+          clear: both;
+          height: 100px;
+        }
+        &__logo {
+          background-image: url("mercarilogo.jpg");
+          background-size: cover;
+          height:80px;
+          width: 90px;
+          margin: 0 auto;
+        }
+        &__status {
+          padding: 30px 0 60px;
+          clear: both;
+          font-weight: bold;
+          text-align:center;
+          color: #ccc;
+        }
+      }
+      .product_purchased {
+        height: 382px;
+        width: 700px;
+        margin: 40px 0 0;
+        background:#fff;
+        &__title {
+          height: 72px;
+          padding: 0 16px;
+          background: #fafafa;
+          font-size: 16px;
+          line-height: 72px;
+          font-weight: bold;
+        }
+        &__during_trading {
+          float: left;
+          width: 350px;
+          height: 72px;
+          background:#fff;
+          border-top: 2px solid #ea352d;
+          text-align: center;
+          line-height: 70px;
+          font-weight: bold;
+        }
+        &__past_transactions {
+          float: right;
+          width: 350px;
+          height: 72px;
+          background:#eee;
+          text-align: center;
+          line-height: 72px;
+          font-weight: bold;
+        }
+        &__margin {
+          clear: both;
+          height: 50px;
+        }
+        &__logo {
+          background-image: url("mercarilogo.jpg");
+          background-size: cover;
+          height:80px;
+          width: 90px;
+          margin: 0 auto;
+        }
+        &__status {
+          padding: 30px 0 60px;
+          clear: both;
+          font-weight: bold;
+          text-align:center;
+          color: #ccc;
+        }
+      }
+    }
+
+
+
+
 }
