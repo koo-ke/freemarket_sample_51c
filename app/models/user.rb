@@ -3,7 +3,12 @@ class User < ApplicationRecord
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable,
-         :omniauthable, omniauth_providers: %i[facebook google_oauth2]
+         :omniauthable, omniauth_providers: [:facebook, :google_oauth2]
+
+  # 暫定的にコメントアウト中(↓城戸、6/2)
+  # validates :email, presence: true
+  # validates :nickname, presence: true 
+  has_many :sns_credentials, dependent: :destroy
 
     def self.find_oauth(auth)
     uid = auth.uid
@@ -50,7 +55,5 @@ class User < ApplicationRecord
     return { user: user , sns_id: sns.id }
   end
 
-  validates :email, presence: true
-  validates :nickname, presence: true
 
 end
