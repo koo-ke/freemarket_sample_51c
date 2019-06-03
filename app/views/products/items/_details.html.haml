@@ -1,0 +1,321 @@
+.wrapper
+  .item-detail-container
+  .item-detail-confirmation
+    .item-detail-confirmation-name
+      COACH コーチ ショルダーバッグ
+    .item-detail-confirmation-content
+      .item-detail-confirmation-content-photo
+        = image_tag("https://static.mercdn.net/item/detail/orig/photos/m51903655778_5.jpg?1559433555", class: "photo")
+        .item-detail-confirmation-content-photos
+          = image_tag("https://static.mercdn.net/item/detail/orig/photos/m51903655778_1.jpg?1559433555", class: "photos")
+          = image_tag("https://static.mercdn.net/item/detail/orig/photos/m51903655778_2.jpg?1559433555", class: "photos")
+          = image_tag("https://static.mercdn.net/item/detail/orig/photos/m51903655778_3.jpg?1559433555", class: "photos")
+          = image_tag("https://static.mercdn.net/item/detail/orig/photos/m51903655778_4.jpg?1559433555", class: "photos")
+          = image_tag("https://static.mercdn.net/item/detail/orig/photos/m51903655778_5.jpg?1559433555", class: "photos")
+      %table
+        %tbody
+          %tr
+            %th 出品者
+            %td
+              = link_to '/' do
+                ミンミニ
+              .rate-icons
+                = fa_icon "fas", class: "fa-smile-o"
+                %span 100
+                = fa_icon "fas", class: "fa-meh-o"
+                %span 100
+                = fa_icon "fas", class: "fa-frown-o"
+                %span 100
+          %tr
+            %th カテゴリー
+            %td
+              = link_to '/' do
+                レディース
+              %br 
+              = link_to '/' do
+                = fa_icon "fas", class: "fa-chevron-right"
+                バッグ
+              %br 
+              = link_to '/' do
+                = fa_icon "fas", class: "fa-chevron-right"
+                ショルダーバック
+          %tr
+            %th ブランド
+            %td
+              = link_to '/' do
+                コーチ
+          %tr
+            %th 商品の状態
+            %td やや傷の恐れあり
+          %tr
+            %th 配送料の負担	
+            %td 送料込み(出品者負担)
+          %tr
+            %th 配送の方法
+            %td らくらくメルカリ便
+          %tr
+            %th 配送元地域
+            %td
+              = link_to '/' do
+                岩手県
+          %tr
+            %th 発送日の目安
+            %td 1~2日で発送
+    .item-detail-confirmation-price_box
+      .item-detail-confirmation-price_box-price
+        ¥1,600
+      .item-detail-confirmation-price_box-tax
+        (税込)
+      .item-detail-confirmation-price_box-shipping
+        送料込み
+    = link_to '/' do
+      .item-detail-confirmation-buy_btn
+        購入画面に進む
+    .item-detail-confirmation-description
+      %p
+        "シャネルのバッグです！
+
+        ⚫︎角、外面に多少の擦れがあります
+
+        シャネルのブラックハンドバッグ^ ^
+        シルバーのココマークがキラリと光ります☆
+        この機会にいかがですか♫
+
+        ☆正規品☆
+        【縦】24cm
+        【横】22cm
+        【マチ】9cm"
+    .item-detail-confirmation-buttom
+      = link_to '/' do
+        .item-detail-confirmation-buttom-like
+          = fa_icon "far", class: "fa-heart" 
+          いいね! 0
+      = link_to '/' do
+        .item-detail-confirmation-buttom-report
+          = fa_icon "far", class: "fa-flag"
+          不適切な商品報告
+      = link_to '/' do
+        .item-detail-confirmation-buttom-approach
+          = fa_icon "fas", class: "fa-lock"
+          あんしん・あんぜんへの取り組み
+  .item-comment
+    .item-comment-container
+    .item-comment-content
+      .item-comment-content-inner
+        %p
+          相手のことを考え丁寧なコメントを心がけましょう。不快な言葉遣いなどは利用制限や退会処分となることがあります。
+      %textarea
+      = link_to '/' do
+        .item-comment-btn
+          コメントする
+  %ul.item-link
+    %li.prev
+      = link_to '/' do
+        = fa_icon "fas", class: "fa-chevron-left"
+        アルマーニエクスチェンジ
+    %li.next
+      = link_to '/' do
+        littletalks様送料
+        = fa_icon "fas", class: "fa-chevron-right"
+  .item-sns-box
+    %ul.sns-box
+      %li.facebook
+        = link_to '/' do
+          = fa_icon "fas", class: "fa-facebook-square"
+      %li.twitter
+        = link_to '/' do
+          = fa_icon "fas", class: "fa-twitter-square"
+      %li.pinterest
+        = link_to '/' do
+          = fa_icon "fas", class: "fa-pinterest-square"
+  %h2
+    = link_to '/' do
+      Siaさんのその他の出品
+  %section.item-_other_box
+    .other_items
+      = link_to '/' do
+        .other_item
+          .other_item-img
+            = image_tag("https://static.mercdn.net/thumb/photos/m58136755934_1.jpg?1559516733", class: "other-photos")
+          .other_item-description
+            %h3.ohter_item_name
+              デニム サロペット オーバーオール
+            .other_item_num
+              .other_item_price
+                ¥ 2,500
+              .other_item_font
+                = fa_icon "fas", class: "fa-heart-o"
+                2
+            %p.other_item-tax
+              (税込)          
+      .other_item
+        .other_item-img
+          = image_tag("https://static.mercdn.net/thumb/photos/m31394071559_1.jpg?1557612331", class: "other-photos")
+        .other_item-description
+          %h3.ohter_item_name
+            くまのプーさんぬいぐるみ
+          .other_item_num
+            .other_item_price
+              ¥ 2,500
+            .other_item_font
+              = fa_icon "fas", class: "fa-heart-o"
+              2
+          %p.other_item-tax
+            (税込)
+      .other_item
+        .other_item-img
+          = image_tag("https://static.mercdn.net/thumb/photos/m99547753049_1.jpg?1557554636", class: "other-photos")
+        .other_item-description
+          %h3.ohter_item_name
+            ミッキー ミニー ぬいぐるみバッジ
+          .other_item_num
+            .other_item_price
+              ¥ 2,500
+            .other_item_font
+              = fa_icon "fas", class: "fa-heart-o"
+              2
+          %p.other_item-tax
+            (税込)
+  %section.item-_other_box
+    .other_items
+      .other_item
+        .other_item-img
+          = image_tag("https://static.mercdn.net/thumb/photos/m70101439872_1.jpg?1559450567", class: "other-photos")
+        .other_item-description
+          %h3.ohter_item_name
+            美女と野獣 メガネケース
+          .other_item_num
+            .other_item_price
+              ¥ 2,500
+            .other_item_font
+              = fa_icon "fas", class: "fa-heart-o"
+              2
+          %p.other_item-tax
+            (税込)
+      .other_item
+        .other_item-img
+          = image_tag("https://static.mercdn.net/thumb/photos/m52822702747_1.jpg?1559449875", class: "other-photos")
+        .other_item-description
+          %h3.ohter_item_name
+            ディズニー ミニー メガネクロス
+          .other_item_num
+            .other_item_price
+              ¥ 2,500
+            .other_item_font
+              = fa_icon "fas", class: "fa-heart-o"
+              2
+          %p.other_item-tax
+            (税込)
+      .other_item
+        .other_item-img
+          = image_tag("https://static.mercdn.net/thumb/photos/m77264637164_1.jpg?1559446760", class: "other-photos")
+        .other_item-description
+          %h3.ohter_item_name
+            ミッキー ミニー ぬいぐるみ
+          .other_item_num
+            .other_item_price
+              ¥ 2,500
+            .other_item_font
+              = fa_icon "fas", class: "fa-heart-o"
+              2
+          %p.other_item-tax
+            (税込)
+  %h2.item-second-name
+    = link_to '/' do
+      コーチ ショルダーバッグ その他の出品
+  %section.item-_other_box
+    .other_items
+      = link_to '/' do
+        .other_item
+          .other_item-img
+            = image_tag("https://static.mercdn.net/thumb/photos/m58136755934_1.jpg?1559516733", class: "other-photos")
+          .other_item-description
+            %h3.ohter_item_name
+              デニム サロペット オーバーオール
+            .other_item_num
+              .other_item_price
+                ¥ 2,500
+              .other_item_font
+                = fa_icon "fas", class: "fa-heart-o"
+                2
+            %p.other_item-tax
+              (税込)          
+      .other_item
+        .other_item-img
+          = image_tag("https://static.mercdn.net/thumb/photos/m31394071559_1.jpg?1557612331", class: "other-photos")
+        .other_item-description
+          %h3.ohter_item_name
+            くまのプーさんぬいぐるみ
+          .other_item_num
+            .other_item_price
+              ¥ 2,500
+            .other_item_font
+              = fa_icon "fas", class: "fa-heart-o"
+              2
+          %p.other_item-tax
+            (税込)
+      .other_item
+        .other_item-img
+          = image_tag("https://static.mercdn.net/thumb/photos/m99547753049_1.jpg?1557554636", class: "other-photos")
+        .other_item-description
+          %h3.ohter_item_name
+            ミッキー ミニー ぬいぐるみバッジ
+          .other_item_num
+            .other_item_price
+              ¥ 2,500
+            .other_item_font
+              = fa_icon "fas", class: "fa-heart-o"
+              2
+          %p.other_item-tax
+            (税込)
+  %section.item-_other_box
+    .other_items
+      .other_item
+        .other_item-img
+          = image_tag("https://static.mercdn.net/thumb/photos/m70101439872_1.jpg?1559450567", class: "other-photos")
+        .other_item-description
+          %h3.ohter_item_name
+            美女と野獣 メガネケース
+          .other_item_num
+            .other_item_price
+              ¥ 2,500
+            .other_item_font
+              = fa_icon "fas", class: "fa-heart-o"
+              2
+          %p.other_item-tax
+            (税込)
+      .other_item
+        .other_item-img
+          = image_tag("https://static.mercdn.net/thumb/photos/m52822702747_1.jpg?1559449875", class: "other-photos")
+        .other_item-description
+          %h3.ohter_item_name
+            ディズニー ミニー メガネクロス
+          .other_item_num
+            .other_item_price
+              ¥ 2,500
+            .other_item_font
+              = fa_icon "fas", class: "fa-heart-o"
+              2
+          %p.other_item-tax
+            (税込)
+      .other_item
+        .other_item-img
+          = image_tag("https://static.mercdn.net/thumb/photos/m77264637164_1.jpg?1559446760", class: "other-photos")
+        .other_item-description
+          %h3.ohter_item_name
+            ミッキー ミニー ぬいぐるみ
+          .other_item_num
+            .other_item_price
+              ¥ 2,500
+            .other_item_font
+              = fa_icon "fas", class: "fa-heart-o"
+              2
+          %p.other_item-tax
+            (税込)
+
+
+
+
+
+
+    
