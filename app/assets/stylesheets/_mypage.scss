@@ -537,7 +537,130 @@
       }
     }
 
+}
 
-
-
+.payment_content {
+  width: 100vw;
+  height: 800px;
+  background-color: #f5f5f5;
+  .content {
+    width: 456px;
+    height: 750px;
+    background: #fff;
+    margin: 0 auto;
+    &__title {
+      height: 100px;
+      text-align: center;
+      line-height: 100px;
+      color: #333;
+      border: 1px #eee;
+      font-size: 24px;
+      font-weight: bold;
+      border-bottom: 2px solid #f5f5f5;
+    }
+    .form_content {
+      padding: 24px 64px 64px 64px;
+    .form-group {
+      width: 100%;
+      height: 100%;
+      padding: 40px 0 0;
+    }
+      &__title {
+        font-weight: bold;
+      }
+      &__require {
+        background: #ea352d;
+        margin: 0 0 0 8px;
+        padding: 2px 4px;
+        border-radius: 2px;
+        color: #fff;
+        font-size: 12px;
+        vertical-align: top;
+      }
+      &__card_number {
+        height: 28px;
+        width: 300px;
+        margin: 8px 0 0;
+        padding: 10px 16px 8px;
+        border-radius: 4px;
+        border: 1px solid #ccc;
+        background: #fff;
+        line-height: 1.5;
+        font-size: 16px;
+      }
+      .select-wrap {
+        position: relative;
+        &__size{
+          z-index: 2;
+          height: 48px;
+          width: 130px;
+          padding: 0 16px;
+          margin: 5px 0;
+          border-radius: 4px;
+          border: 1px solid #ccc;
+          background: 0;
+          font-size: 16px;
+          line-height: 1.5;
+          cursor: pointer;
+          -webkit-appearance:none;
+        }
+        &__date {
+          color: #333;
+          font-size: 14px;
+          margin: 0 8px;
+        }
+        .angle-down {
+          position: absolute;
+          font-size: 30px;
+          right: 0;
+          color: #888;
+          margin: 13px 205px 0 0;
+        }
+      }
+    }
+    .signup {
+      text-align: right;
+      margin-top: 8px;
+      &__seqcode-text {
+        color: #0099e8;
+        font-size: 14px;
+      }
+      &__form-question {
+        display: inline-block;
+        width: 14px;
+        height: 14px;
+        border-radius: 50%;
+        background: #0099e8;
+        color: #fff;
+        line-height: 14px;
+        font-size: 12px;
+        text-align: center;
+      }
+    }
+    .btn {
+      height: 48px;
+      width: 318px;
+      background: #ea352d;
+      border: 1px solid #ea352d;
+      color: #fff;
+      text-align: center;
+      line-height: 48px;
+      font-size: 14px;
+      cursor: pointer;
+      margin-top: 40px;
+    }
+    &__card-list {
+      margin: 8px 0 0;
+      font-size: 0;
+      &--image1 {
+        display: inline-block;
+        vertical-align: middle;
+      }
+      &--image {
+        display: inline-block;
+        margin: 0 0 0 8px;
+        vertical-align: middle;
+      }
+    }
+  }
 }
