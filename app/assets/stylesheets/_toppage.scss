@@ -158,11 +158,11 @@
         width: 100vw;
       .toppage_slider1{
         height: 390px;
-        background-image: url("90s.jpg");
+        background-image: image-url("90s.jpg");
       }
       .toppage_slider2{
         height: 390px;
-        background-image: url("kantan.jpg");
+        background-image: image-url("kantan.jpg");
         background-size: cover;
       .ts{
         width: 860px;
@@ -205,7 +205,7 @@
       }
       .toppage_slider3{
         height: 390px;
-        background-image: url("canp.jpg");
+        background-image: image-url("canp.jpg");
       }
     }
   }

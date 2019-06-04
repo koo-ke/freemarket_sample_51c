@@ -408,7 +408,7 @@
       float: right;
       .mypage_backg_round {
         height: 200px;
-        background-image: url('user-bg.jpg');
+        background-image: image-url('user-bg.jpg');
         &__image {
           width: 700px;
           height: 111px;
@@ -470,7 +470,7 @@
           height: 100px;
         }
         &__logo {
-          background-image: url("mercarilogo.jpg");
+          background-image: image-url("mercarilogo.jpg");
           background-size: cover;
           height:80px;
           width: 90px;
@@ -521,7 +521,7 @@
           height: 50px;
         }
         &__logo {
-          background-image: url("mercarilogo.jpg");
+          background-image: image-url("mercarilogo.jpg");
           background-size: cover;
           height:80px;
           width: 90px;
