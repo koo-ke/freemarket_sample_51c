@@ -2,8 +2,8 @@
   .personal-entry
     .signup-page-header
       %header.personal-entry__header
-        %a{href: "https://www.mercari.com/jp/"}
-          %img{alt: "mercari", src: "//www-mercari-jp.akamaized.net/assets/img/common/common/logo.svg?2399382397"}/
+        = link_to 'https://www.mercari.com/jp' do
+          = image_tag "//www-mercari-jp.akamaized.net/assets/img/common/common/logo.svg?2399382397"
       %nav.progress-bar
         %ol.clearfix
           %li.through
@@ -25,17 +25,12 @@
     .info-content
       %h2.info-content__head 住所入力
       %form.info-inner.registration-form{action: "https://www.mercari.com/jp/signup/sms_confirmation/?after_save_callbacttps://www.mercari.com/jp/", method: "POST", novalidate: "novalidate"}
-        %input{name: "__csrf_value", type: "hidden",value: "49797f1edd453785d17eb5a55fe5422b5e627796081122f82ba85bd3526dded666f73ab52a625534f629d0b36498dace9e72a8b05374f8cdc1d84fcd5840fc8cf"}/
+        %input{name: "__csrf_value", type: "hidden",value: ""}/
         .main-content
           .form-group
             %label{for: "postal_code"} 郵便番号
             %span.form-require 必須
             %input.input-default{name: "postal_code", placeholder: "例) 123-4567", type: "integer",value: ""}/
-          -# .form-group
-          -#   %label{:for "email"} 都道府県
-          -#   %span.form-require 必須(あとでactive_hash適用！)
-          -#   %input.input-default{:name "email", :placeholder "メケメケ", :type "email",value:: ""}/
-          -# %input{:name "login_type", :type "hidden", value:: ""}/
           .form-group
             %label{for: "prefecture"} 都道府県
             %span.form-require 必須
@@ -105,10 +100,6 @@
             %label{for: "building"} 建物名
             %span.form-optional  任意
             %input.input-default{name: "building", placeholder: "例) なんとかビル103", type: "string",value: ""}/
-          -# .form-group
-          -#   %label{:for "first_name_kanji"} 電話
-          -#   %span.form-optional  任意
-          -#   %input.input-default{:name "first_name_kanji", :placeholder "例) 111-11111-11111", :type "text",value:: ""}/
         .main-content
           %button.btn-default.btn-red{type: "submit"} 次へ進む
  
