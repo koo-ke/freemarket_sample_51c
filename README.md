@@ -1,5 +1,5 @@
 # README
-
+<!-- 
 Usersテーブル
 
 |Column|Type|Options|
@@ -63,7 +63,7 @@ Productsテーブル
 - has_many :images
 - belongs_to :brand
 - belongs_to :saler, class_name: "User"
-- belongs_to :buyer, class_name: "User"
+- belongs_to :buyer, class_name: "User" -->
 
 
 Brandsテーブル
