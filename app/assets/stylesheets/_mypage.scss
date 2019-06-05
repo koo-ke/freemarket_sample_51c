@@ -2,7 +2,6 @@
   box-sizing: border-box;
   background:#f5f5f5;
 
-
   .mypage-header {
     height: 48px;
     border-top: 1px solid #eee;
@@ -40,12 +39,14 @@
   .margin {
     margin: 40px auto 0;
     width: 1020px;
+    height: 1300px;
   }
+
 
   .side-bar {
     float: left;
     width: 280px;
-    margin: 0 40px 0 0;
+    margin: auto 0;
     background-color: #fff;
     &__nav-list{
       height: 48px;
