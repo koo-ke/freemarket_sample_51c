@@ -24,7 +24,7 @@ Rails.application.routes.draw do
     end
   end
 
-  resources :register do 
+  resources :register do
     collection do
       get 'memberinfo'
       get 'numberverification'

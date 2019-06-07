@@ -1,2 +1,2 @@
 .logout_content
-  = link_to 'ログアウト', "/users/sign_out", method: :delete, class: 'logout_content__logout_btn'
+  = link_to 'ログアウト', destroy_user_session_path, method: :delete, class: 'logout_content__logout_btn'
