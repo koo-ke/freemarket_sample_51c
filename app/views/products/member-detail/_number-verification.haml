@@ -32,7 +32,7 @@
               %input.input-default{name: "nickname", placeholder: "携帯電話の番号を入力", type: "text", value: ""}/
               %p.verification-text
                 本人確認のため、携帯電話のSMS(ショートメッセージサービス)を利用して認証を行います。
-            = link_to "/register/memberaddfress", class: "kasen" do
+            = link_to memberaddfress_register_index_path, class: "kasen" do
               %button.btn-default.btn-red{type: "submit"} SMSを送信する
             %p.verification-text
               ※電話番号は本人確認や不正利用防止のために利用します。他のユーザーに公開されることはありません。

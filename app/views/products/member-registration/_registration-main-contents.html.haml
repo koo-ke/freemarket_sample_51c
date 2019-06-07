@@ -4,7 +4,7 @@
       %h2.main-content__head 新規会員登録
       .inner-content
         .l-main-content
-          = link_to "/register/memberinfo", class: 'btn-default btn-mail' do
+          = link_to memberinfo_register_index_path, class: 'btn-default btn-mail' do
             = fa_icon "envelope", class: "icon-mail"
             メールアドレスで登録
           %button#facebook-login.btn-default.btn-sns.btn-sns-facebook
