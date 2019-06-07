@@ -3,7 +3,7 @@
 class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
 
   def facebook
-    callback_for(:facebook) #コールバック
+    callback_for(:facebook)
   end
 
   def google_oauth2
@@ -15,13 +15,13 @@ class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
     info = User.find_oauth(request.env["omniauth.auth"]) #usersモデルのメソッド
     @user = info[:user]
     sns_id = info[:sns_id]
-    # binding.pry
-    if @user.persisted? #userが存在したら
+    
+    if @user.persisted?
       sign_in_and_redirect @user, event: :authentication
       set_flash_message(:notice, :success, kind: "#{provider}".capitalize) if is_navigational_format?
-    else #userが存在しなかったら
-      session["devise.sns_id"] = sns_id #sns_credentialのid devise.他のアクションに持ち越せる(少し難)
-      render template: "users/registrations/new" #redirect_to だと更新してしまうのでrenderで
+    else 
+      session["devise.sns_id"] = sns_id 
+      render template: "users/registrations/new" 
     end
   end
 
