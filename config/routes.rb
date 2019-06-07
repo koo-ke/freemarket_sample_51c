@@ -24,10 +24,15 @@ Rails.application.routes.draw do
     end
   end
 
-  get "/registration/member-info" => 'registration#memberinfo'
-  get "/registration/number-verification" => 'registration#numberverification'
-  get "/registration/member-addfress" => 'registration#memberaddfress'
-  get "/registration/payment" => 'registration#payment'
-  get "/registration/completion" => 'registration#completion'
+  resources :register do 
+    collection do
+      get 'memberinfo'
+      get 'numberverification'
+      get 'memberaddfress'
+      get 'payment'
+      get 'completion'
+    end
+  end
+
 
 end
