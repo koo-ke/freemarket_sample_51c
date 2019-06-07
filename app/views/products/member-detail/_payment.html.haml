@@ -95,4 +95,6 @@
             カード裏面の番号とは？
           
         %input{type: "hidden"}/
-        %button.btn{type: "button"} 追加する
+
+        = link_to "/registration/completion" do
+          %button.btn{type: "button"} 追加する
