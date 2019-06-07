@@ -1,0 +1,68 @@
+%aside
+  .app-banner
+    .app-banner-pc
+      .app-banner-pc-inner
+        %h2.app-banner-pc-inner__top-logo スマホでかんたんフリマアプリ
+        %p.app-banner-pc-inner__bottom-logo 今すぐ無料ダウンロード！
+        .app-banner__iconleft
+          = image_tag '//www-mercari-jp.akamaized.net/assets/img/common/common/mercari_icon.png?2399382397', class: 'app-banner-icon-mercari', width: '68'
+          %ul.app-banner__iconright
+            %li
+              = image_tag '//www-mercari-jp.akamaized.net/assets/img/common/common/app-store.svg?2399382397', width: '133', height: '40'
+              =image_tag '//www-mercari-jp.akamaized.net/assets/img/common/common/google-play.svg?2399382397', width: '133', height: '40'
+      %figure
+        = image_tag '//www-mercari-jp.akamaized.net/assets/img/common/jp/download_content_pc.png?2399382397', class:'app-banner__topphoto', width: '300', height: '260'
+%footer
+  .grobal-footer
+    .grobal-footer__contents
+      .grobal-footer-cell
+        %h2.grobal-footer__head メルカリについて
+        %ul
+          %li 会社概要（運営会社）
+          %li 採用情報
+          %li プレスリリース
+          %li 公式ブログ
+          %li メルカリロゴ利用ガイドライン
+          %li.fotter-social-link
+            %a.grobal-footer__twitter= fa_icon 'twitter'
+            %a.grobal-footer__facebook= fa_icon 'facebook-square'
+      .grobal-footer-cell
+        %h2.grobal-footer__head ヘルプ＆ガイド
+        %ul
+          %li メルカリガイド
+          %li らくらくメルカリ便
+          %li ゆうゆうメルカリ便
+          %li 大型メルカリ便
+          %li 車体取扱ガイド
+          %li メルカリあんしん・あんぜん宣言！
+          %li 偽ブランド品撲滅への取り組み
+          %li メルカリボックス
+      .grobal-footer-cell__fullwidth
+        %h2.grobal-footer__head プライバシーと利用規約
+        .footer-inner-cell-left
+          %ul
+            %li プライバシーポリシー
+            %li メルカリ利用規約
+            %li あんしんスマホサポート制度に関する利用特約
+            %li コンプライアンスポリシー
+        .footer-inner-cell-right
+          %ul
+            %li 個人データの安全管理に係る基本方針
+            %li 特定商取引に関する表記
+            %li 資金決済法に基づく表示
+            %li 法令順守と犯罪防止のために
+            %li 返品・返金ポリシー
+        .grobal-footer-cell__nation
+          %h2.grobal-footer__head 国
+          %ul
+            %li 日本
+            %li United States
+    .grobal-footer-bottom
+      .grobal-footer-bottom__logo
+        = image_tag '//www-mercari-jp.akamaized.net/assets/img/common/common/logo-white.svg?2399382397', width: '124', height: '33'
+        %span.grobal-footer__copyright
+          %small ©️ 2019Mercari
+  = link_to '/items/new', class: 'grobal-footer-sell-btn' do
+    %h3.grobal-footer-sell-btn__word 出品           
+    %p.grobal-footer-sell-btn__icon= fa_icon 'camera'
+      
