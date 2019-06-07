@@ -793,6 +793,7 @@ a {
   transition: all ease-out .3s;
   cursor: pointer;
   text-align: center;
+  
 }
 button {
   outline: 0;
@@ -915,12 +916,6 @@ li {
 }
 
 
-
-
-
-
-
-
 .form-group {
   margin: 40px 0 0;
   label {
@@ -951,7 +946,11 @@ li {
   font-size: 16px;
 }
 
-.main-content {
+.main-content2 {
   max-width: 320px;
   margin: 0 auto;
+}
+
+.kasen {
+  text-decoration: none;
 }
