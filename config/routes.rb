@@ -24,4 +24,15 @@ Rails.application.routes.draw do
     end
   end
 
+  resources :registers do
+    collection do
+      get 'memberinfo'
+      get 'numberverification'
+      get 'memberaddfress'
+      get 'payment'
+      get 'completion'
+    end
+  end
+
+
 end
