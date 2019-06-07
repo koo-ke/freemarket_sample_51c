@@ -1,4 +1,5 @@
-class RegistrationController < ApplicationController
+class RegisterController < ApplicationController
+ 
  def memberinfo
  end
 
