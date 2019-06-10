@@ -9,15 +9,16 @@ class Product < ApplicationRecord
   validates :shipping_origin_area, presence: true
   validates :days_to_ship,         presence: true
   validates :saler_id,             presence: true
-  validates :buyer_id,             presence: true
+  # validates :buyer_id,             presence: true
 
   has_many :categories,            through: :products_categories
   has_many :products_categories
   has_many :likes
-  has_many :images
+  has_many_attached :images
 
-  belongs_to :brand
-  belongs_to :saler,               class_name: "User"
-  belongs_to :buyer,               class_name: "User"
+
+  belongs_to :brand,       optional: true
+  belongs_to :saler,       optional: true        
+  belongs_to :buyer,       optional: true       
 
 end
