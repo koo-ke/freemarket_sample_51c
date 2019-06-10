@@ -76,8 +76,13 @@ gem 'mini_magick', '~> 4.8'
 gem "aws-sdk-s3", require: false
 gem "figaro", "~> 1.1.1"
 gem 'devise'
+gem 'omniauth'
+gem 'omniauth-facebook'
+gem 'omniauth-google-oauth2'
+gem 'dotenv-rails'
 gem 'haml-rails'
 gem 'erb2haml'
 gem 'font-awesome-rails'
 gem 'active_hash'
 gem 'pry-rails'
+gem 'gretel'
