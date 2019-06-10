@@ -54,7 +54,7 @@ Productsテーブル
 |shipping_origin_area|string|null: false|
 |days_to_ship|string|null: false|
 |saler_id|references|null: false, foreign_key: true|
-|buyer_id|references|null: false, foreign_key: true|
+|buyer_id|references|foreign_key: true|
 
 ### Association
 - has_many :categories,  through: :products_categories
@@ -66,7 +66,7 @@ Productsテーブル
 - belongs_to :buyer, class_name: "User" -->
 
 
-Brandsテーブル
+<!-- Brandsテーブル
 
 |Column|Type|Options|
 |------|----|-------|
@@ -75,11 +75,11 @@ Brandsテーブル
 |ancestry|string|index: true|
 
 ### Association
-- has_many :products
+- has_many :products -->
 
 
 
-Imagesテーブル
+<!-- Imagesテーブル
 
 |Column|Type|Options|
 |------|----|-------|
@@ -88,7 +88,7 @@ Imagesテーブル
 |product_id|references|null: false, foreign_key: true|
 
 ### Association
-- belongs_to :product
+- belongs_to :product -->
 
 
 
