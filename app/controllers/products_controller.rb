@@ -2,6 +2,9 @@ class ProductsController < ApplicationController
   def index
   end
 
+  def show
+  end
+  
   def new
     @product = Product.new
   end
@@ -9,6 +12,9 @@ class ProductsController < ApplicationController
   def create
     Product.create!(product_params)
     redirect_to root_path
+  end
+
+  def purchasing
   end
 
   private
