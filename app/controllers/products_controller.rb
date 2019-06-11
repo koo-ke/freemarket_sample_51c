@@ -12,6 +12,7 @@ class ProductsController < ApplicationController
 
   def edit
     @product = Product.find(params[:id])
+    # binding.pry
   end
 
   private
