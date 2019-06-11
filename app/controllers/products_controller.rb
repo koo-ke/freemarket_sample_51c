@@ -3,6 +3,11 @@ class ProductsController < ApplicationController
   end
 
   def show
+    @product = Product.find_by(id: 1)                                         #商品情報
+    @user = User.find_by(id: 1)                                               #ユーザー情報
+    @address = Address.find_by(id: 1)                                         #住所情報
+    @prefecture = Prefecture.find_by(id: @product.shipping_origin_area_was)   #都道府県
+    @item_status = ItemStatus.find_by(id: @product.item_status_was)           #商品の状態（新品など）
   end
   
   def new

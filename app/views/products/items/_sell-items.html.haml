@@ -66,7 +66,7 @@
                       商品の状態
                       %span.form-require 必須
                     .select-wrap
-                      = f.select :item_status, [["---" , ""],["新品、未使用" , "1"],["未使用に近い" , "2"],["目立った傷や汚れなし" , "3"],["やや傷や汚れあり" , "4"],["傷や汚れあり" , "5"],["全体的に状態が悪い" , "6"]],{},{class: "select-default"}
+                      = f.collection_select :item_status, ItemStatus.all, :id, :name, {prompt: "---"},{class:"select-default"}  
                       = fa_icon "fas", class: "fa-angle-down"
 
               .sell-content.clearfix
@@ -79,7 +79,7 @@
                       配送料の負担
                       %span.form-require 必須
                     .select-wrap
-                      = f.select :shipping_charges, [["---" , ""],["送料込み(出品者負担)" , "2"],["着払い(購入者負担)" , "1"]],{},{class: "select-default"}
+                      = f.select :shipping_charges, [["---" , ""],["送料込み(出品者負担)" , "送料込み(出品者負担)"],["着払い(購入者負担)" , "着払い(購入者負担)"]],{},{class: "select-default"}
                       = fa_icon "fas", class: "fa-angle-down"
 
                   .form-group
@@ -94,7 +94,7 @@
                       発送までの日数
                       %span.form-require 必須
                     .select-wrap
-                      = f.select :days_to_ship, [["---" , ""],["1~2日で発送" , "1"],["2~3日で発送" , "2"],["4~7日で発送" , "3"]], {},{class: "select-default"}
+                      = f.select :days_to_ship, [["---" , ""],["1~2日で発送" , "1~2日で発送"],["2~3日で発送" , "2~3日で発送"],["4~7日で発送" , "4~7日で発送"]], {},{class: "select-default"}
                       = fa_icon "fas", class: "fa-angle-down"
 
               .sell-content.clearfix
