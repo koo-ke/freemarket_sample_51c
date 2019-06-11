@@ -6,7 +6,7 @@ Rails.application.routes.draw do
 
   root 'products#index'
   
-  resources :products, only: [:new, :create, :show] do
+  resources :products do
     member do
       get 'purchasing'
     end
