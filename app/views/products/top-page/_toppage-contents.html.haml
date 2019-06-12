@@ -2,16 +2,15 @@
   .mein-contents
     .pickup-container
       %h2.pickup-head ピックアップカテゴリー
+      
       .item-box-container
         %h3.text-center
           = link_to '#', class: 'text-center__item' do
             レディース 新着アイテム
         .item-box-content
           = render partial: 'product', collection: @products1
-
         .view-all
           %span.view-all-index すべての商品を見る
-
 
       .item-box-container
         %h3.text-center
