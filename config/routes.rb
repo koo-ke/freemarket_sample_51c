@@ -6,7 +6,11 @@ Rails.application.routes.draw do
 
   root 'products#index'
   
-  resources :products
+  resources :products do
+    member do
+      get 'purchasing'
+    end
+  end
 
   resources :users do
 
@@ -16,13 +20,6 @@ Rails.application.routes.draw do
       get 'information'
       get 'login'
       get 'logout'
-    end
-  end
-
-  resources :items do
-
-    member do
-      get 'purchasing'
     end
   end
 
