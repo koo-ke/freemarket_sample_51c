@@ -11,8 +11,8 @@ class Product < ApplicationRecord
   validates :saler_id,             presence: true
   # validates :buyer_id,             presence: true
 
-  has_many :categories,            through: :products_categories
-  has_many :products_categories
+  has_many :product_categories
+  has_many :categories,            through: :product_categories
   has_many :likes
   has_many_attached :images
 

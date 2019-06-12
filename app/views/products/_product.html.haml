@@ -1,0 +1,15 @@
+%section.item-box
+  = link_to '/products/:id' do
+    %figure.item-box__photo
+      = image_tag product.images.first, class:'lazyloaded', alt: '商品名', width: '213', height: '330'
+  .item-box__body
+    %h3.item-box__name
+      = product.name
+    .item-box__info
+      %h5.item-box__price 
+        = product.price
+      %h8.likes-icon= fa_icon 'heart'
+      %h8.likes-count 
+        -# = product.likes.count
+      %h5.item-box__tax (税込)
+

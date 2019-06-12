@@ -1,5 +1,15 @@
 class ProductsController < ApplicationController
   def index
+  
+    @category1 = Category.find(1)
+    @products1 = @category1.products.limit(4).order("created_at DESC")
+
+    @category2 = Category.find(2)
+    @products2 = @category2.products.limit(4).order("created_at DESC")
+
+    @category3 = Category.find(3)
+    @products3 = @category3.products.limit(4).order("created_at DESC")
+
   end
 
   def new
