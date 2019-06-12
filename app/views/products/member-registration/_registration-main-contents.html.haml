@@ -11,7 +11,7 @@
             = fa_icon "facebook-square", class: "icon-sns"
             Facebookで登録
           %button#google-login.btn-default.btn-sns.btn-sns-google
-            = fa_icon "google", class: "icon-sns"
+            = image_tag "google.png" ,  height:25 , class: "icon-sns"
             Googleで登録
     %form#login_form_facebook{action: "/jp/signup/facebook/", method: "POST", novalidate: "novalidate"}
       %input{name: "__csrf_value", type: "hidden", value: "49797f1edd453785d17eb5a55fe5422b5e627796081122f82ba85bd3526dded666f73ab52a625534f629d0b36498dace9e72a8b05374f8cdc1d84fcd5840fc8cf"}/
