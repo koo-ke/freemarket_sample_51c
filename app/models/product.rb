@@ -21,4 +21,6 @@ class Product < ApplicationRecord
   belongs_to :saler,       optional: true        
   belongs_to :buyer,       optional: true       
 
+
+  scope :recent, -> { order(created_at: :desc).limit(4) }
 end

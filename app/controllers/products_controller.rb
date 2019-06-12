@@ -2,13 +2,13 @@ class ProductsController < ApplicationController
   def index
   
     @category1 = Category.find(1)
-    @products1 = @category1.products.limit(4).order("created_at DESC")
+    @products1 = @category1.products.recent
 
     @category2 = Category.find(2)
-    @products2 = @category2.products.limit(4).order("created_at DESC")
+    @products2 = @category2.products.recent
 
     @category3 = Category.find(3)
-    @products3 = @category3.products.limit(4).order("created_at DESC")
+    @products3 = @category3.products.recent
 
   end
 
