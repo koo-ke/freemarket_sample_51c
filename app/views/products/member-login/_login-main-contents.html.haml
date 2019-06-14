@@ -10,7 +10,7 @@
           = fa_icon "facebook-square", class: "icon-sns"
           Facebookでログイン
         %button#google-login.btn-default.btn-sns.btn-sns-google
-          = fa_icon "google", class: "icon-sns"
+          = image_tag "google.png" ,  height:25 , class: "icon-sns"
           Googleでログイン
       = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
         .field.inner-content
