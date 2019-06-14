@@ -1,5 +1,5 @@
 class ProductsController < ApplicationController
-  before_action :set_product, only: [:destroy] 
+  before_action :set_product, only: [:destroy, :edit] 
 
   def index
   
@@ -15,7 +15,7 @@ class ProductsController < ApplicationController
   end
 
   def show
-    @product = Product.find(39)       #商品情報
+    @product = Product.find(40)       #商品情報
     @user = User.find(1)                                               #ユーザー情報
     @address = Address.find(1)                                         #住所情報
     @prefecture = Prefecture.find(25)   #都道府県
@@ -35,7 +35,6 @@ class ProductsController < ApplicationController
   end
 
   def edit
-    product = Product.find(params[:id])
   end
 
   def destroy
