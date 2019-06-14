@@ -13,7 +13,7 @@ class CreateProducts < ActiveRecord::Migration[5.2]
       t.string        :shipping_origin_area,      null: false
       t.string        :days_to_ship,              null: false
       t.integer       :saler_id,                  null: false, foreign_key: true
-      t.integer       :buyer_id,                  foreign_key: true, null: false
+      t.integer       :buyer_id,                  foreign_key: true, default: 0
 
       t.timestamps
     end
