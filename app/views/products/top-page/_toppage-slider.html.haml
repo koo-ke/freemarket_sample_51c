@@ -1,20 +1,25 @@
 .toppage_slider
-  %ul.t
-    %li.item
-      .toppage_slider1
-    %li.item
-      .toppage_slider2
-        .ts
-          .inner
-            %h2 スマホでかんたん
-            %h2 フリマアプリ
-            %p メルカリはスマホカメラからすぐに出品できる
-            %p 購入時も安心な独自システムのアプリです
-            .top-main-visual-store.clearfix
-              %a.pull-left{:href => "https://itunes.apple.com/jp/app/id667861049?l=ja&mt=8"}
-                %img.icon{:alt => "", :src => "//www-mercari-jp.akamaized.net/assets/img/common/common/app-store.svg?2399382397"}/
-              %a.pull-left{:href => "https://play.google.com/store/apps/details?id=com.kouzoh.mercari&hl=ja"}
-                %img.icon{:alt => "", :src => "//www-mercari-jp.akamaized.net/assets/img/common/common/google-play.svg?2399382397"}/
+  .swiper-container.top-carousel
+    .swiper-wrapper
+      .swiper-slide
+        = image_tag 'image01.jpg', alt: 'swipe01' , class: 'slider-image'
+      .swiper-slide
+        .inner
           %img.sumaho{:alt => "", :src => "//www-mercari-jp.akamaized.net/assets/img/common/jp/top/main_content_pc.png?2399382397"}/
-    %li.item
-      .toppage_slider3
+          %h1 スマホでかんたん
+          %h2 フリマアプリ
+          %p メルカリはスマホカメラからすぐに出品できる
+          %p 購入時も安心な独自システムのアプリです
+          .top-main-visual-store.clearfix
+            %a.pull-left{:href => "https://itunes.apple.com/jp/app/id667861049?l=ja&mt=8"}
+              %img.icon{:alt => "", :src => "//www-mercari-jp.akamaized.net/assets/img/common/common/app-store.svg?2399382397"}/
+            %a.pull-left{:href => "https://play.google.com/store/apps/details?id=com.kouzoh.mercari&hl=ja"}
+              %img.icon{:alt => "", :src => "//www-mercari-jp.akamaized.net/assets/img/common/common/google-play.svg?2399382397"}/
+      .swiper-slide
+        = image_tag 'image03.jpg', alt: 'swipe03' , class: 'slider-image'
+    .swiper-button-prev
+      = fa_icon 'angle-left' , class: 'icon'
+    .swiper-button-next
+      = fa_icon 'angle-right' , class: 'icon'
+    .swiper-pagination
+    = javascript_include_tag "https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/js/swiper.min.js"

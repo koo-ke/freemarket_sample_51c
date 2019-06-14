@@ -2,23 +2,25 @@
   .item-detail-container
   .item-detail-confirmation
     .item-detail-confirmation-name
-      COACH コーチ ショルダーバッグ
+      = @product.name
     .item-detail-confirmation-content
       .item-detail-confirmation-content-photo
-        = image_tag("https://static.mercdn.net/item/detail/orig/photos/m51903655778_5.jpg?1559433555", class: "photo")
+        = image_tag @product.images.first , class: "photo"
         .item-detail-confirmation-content-photos
-          = image_tag("https://static.mercdn.net/item/detail/orig/photos/m51903655778_1.jpg?1559433555", class: "photos")
-          = image_tag("https://static.mercdn.net/item/detail/orig/photos/m51903655778_2.jpg?1559433555", class: "photos")
-          = image_tag("https://static.mercdn.net/item/detail/orig/photos/m51903655778_3.jpg?1559433555", class: "photos")
-          = image_tag("https://static.mercdn.net/item/detail/orig/photos/m51903655778_4.jpg?1559433555", class: "photos")
-          = image_tag("https://static.mercdn.net/item/detail/orig/photos/m51903655778_5.jpg?1559433555", class: "photos")
+          -# 複数枚の保存ができるまでお預け ↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓
+          = image_tag @product.images.first , class: "photos"
+          = image_tag @product.images.first , class: "photos"
+          = image_tag @product.images.first , class: "photos"
+          = image_tag @product.images.first , class: "photos"
+          = image_tag @product.images.first , class: "photos" 
+          -# 複数枚の保存ができるまでお預け ↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑
       %table
         %tbody
           %tr
             %th 出品者
             %td
               = link_to '/' do
-                ミンミニ
+                = @user.nickname
               .rate-icons
                 = fa_icon "fas", class: "fa-smile-o"
                 %span 100
@@ -46,10 +48,12 @@
                 コーチ
           %tr
             %th 商品の状態
-            %td やや傷の恐れあり
+            %td
+              = @item_status.name
           %tr
             %th 配送料の負担	
-            %td 送料込み(出品者負担)
+            %td
+              = @product.shipping_charges
           %tr
             %th 配送の方法
             %td らくらくメルカリ便
@@ -57,13 +61,15 @@
             %th 配送元地域
             %td
               = link_to '/' do
-                岩手県
+                = @prefecture.name
           %tr
             %th 発送日の目安
-            %td 1~2日で発送
+            %td
+              = @product.days_to_ship
     .item-detail-confirmation-price_box
       .item-detail-confirmation-price_box-price
-        ¥1,600
+        ¥
+        = converting_to_jpy(@product.price)
       .item-detail-confirmation-price_box-tax
         (税込)
       .item-detail-confirmation-price_box-shipping
@@ -73,18 +79,7 @@
         購入画面に進む
     .item-detail-confirmation-description
       %p
-        "シャネルのバッグです！
-
-        ⚫︎角、外面に多少の擦れがあります
-
-        シャネルのブラックハンドバッグ^ ^
-        シルバーのココマークがキラリと光ります☆
-        この機会にいかがですか♫
-
-        ☆正規品☆
-        【縦】24cm
-        【横】22cm
-        【マチ】9cm"
+        = @product.text
     .item-detail-confirmation-buttom
       = link_to '/' do
         .item-detail-confirmation-buttom-like

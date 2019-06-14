@@ -1,8 +1,23 @@
 class ProductsController < ApplicationController
   def index
+  
+    @category1 = Category.find(1)
+    @products1 = @category1.products.recent
+
+    @category2 = Category.find(2)
+    @products2 = @category2.products.recent
+
+    @category3 = Category.find(3)
+    @products3 = @category3.products.recent
+
   end
 
   def show
+    @product = Product.find(1)                                         #商品情報
+    @user = User.find(1)                                               #ユーザー情報
+    @address = Address.find(1)                                         #住所情報
+    @prefecture = Prefecture.find(@product.shipping_origin_area_was)   #都道府県
+    @item_status = ItemStatus.find(@product.item_status_was)           #商品の状態（新品など）
   end
   
   def new
