@@ -15,7 +15,7 @@ class ProductsController < ApplicationController
   end
 
   def show
-    @product = Product.find(40)       #商品情報
+    @product = Product.find(42)       #商品情報
     @user = User.find(1)                                               #ユーザー情報
     @address = Address.find(1)                                         #住所情報
     @prefecture = Prefecture.find(25)   #都道府県
@@ -42,7 +42,7 @@ class ProductsController < ApplicationController
       @product.destroy
       redirect_to root_path
     else
-      redirect_to action: :show
+      redirect_to action: :show, notice: "削除に失敗しました"
     end
   end
 
