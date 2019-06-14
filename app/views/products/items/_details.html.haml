@@ -124,7 +124,7 @@
         = link_to '/' do
           = fa_icon "fas", class: "fa-pinterest-square"
     %p.delete-btn
-      = link_to  product_path(@product.id), class: "gray-delete", method: :delete do
+      = link_to  product_path(@product), class: "gray-delete", method: :delete do
         この商品を削除する
       
   %h2
