@@ -12,5 +12,31 @@
 //
 //= require rails-ujs
 //= require activestorage
+//= require jquery
+//= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+
+$(function() {
+
+  var mySwiper = new Swiper('.swiper-container', {
+    autoHeight: true,
+    loop: true,
+    speed: 1000,
+    autoplay: {
+      delay: 3500,
+      disableOnInteraction: false,
+      reverseDirection: false
+    },
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev'
+    },
+    pagination: {
+      el: '.swiper-pagination',
+      type: 'bullets',
+      clickable: true
+    }
+  });
+
+});
