@@ -123,6 +123,10 @@
       %li.pinterest
         = link_to '/' do
           = fa_icon "fas", class: "fa-pinterest-square"
+    %p.delete-btn
+      = link_to  product_path(@product.id), class: "gray-delete", method: :delete do
+        この商品を削除する
+      
   %h2
     = link_to '/' do
       Siaさんのその他の出品
