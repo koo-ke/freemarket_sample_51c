@@ -5,7 +5,7 @@
         %div
           .sell-container-inner
             %h2.exhibition-head 商品の情報を入力
-            = form_with(model: @product, method: :post, local: true) do |f|              
+            = form_with(model: @product, method: :patch, local: true) do |f|             
               .exhibition-upload-box
                 %h3.exhibition-upload-head
                   出品画像
@@ -111,7 +111,7 @@
                         .l-right.sell-price-input#product_price
                           ¥
                           %div
-                            = f.text_field :price, placeholder: "例）300", value: "", class: "input-default" ,id:"product_price"
+                            = f.text_field :price, placeholder: "例）300", value: "#{@product.price}", class: "input-default" ,id:"product_price"
                     %li.clearfix
                       .l-left
                         販売手数料 (10%)
@@ -141,7 +141,7 @@
                       加盟店規約
                     に同意したことになります。
 
-                = f.submit "出品する", class:"btn-default btn-red"   
+                = f.submit "変更する", class:"btn-default btn-red"   
                 = link_to '/' do
                   .btn-default.btn-gray
                     もどる              

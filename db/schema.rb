@@ -80,7 +80,7 @@ ActiveRecord::Schema.define(version: 2019_06_13_005519) do
     t.string "shipping_origin_area", null: false
     t.string "days_to_ship", null: false
     t.integer "saler_id", null: false
-    t.integer "buyer_id"
+    t.integer "buyer_id", default: 0
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["name"], name: "index_products_on_name"

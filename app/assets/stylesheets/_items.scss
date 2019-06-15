@@ -451,6 +451,21 @@ h2:last-child {
 .item-second-name {
   margin-top: 20px;
 }
+.delete-btn {
+  width: 620px;
+  height: 50px;
+  margin: 0px 40px;
+  position: relative;
+  background-color: #ccc;
+}
+.gray-delete {
+  color: white;
+  font-size: 14px;
+  position: absolute;
+  top: 15px;
+  right: 250px;
+  background-color: #ccc;
+}
 }
 
 .wrapper-sell {
