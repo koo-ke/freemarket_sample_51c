@@ -21,7 +21,9 @@ class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
       set_flash_message(:notice, :success, kind: "#{provider}".capitalize) if is_navigational_format?
     else 
       session["devise.sns_id"] = sns_id 
-      render template: "users/registrations/new" 
+      # before
+      # render template: "users/registrations/new" 
+      render "registers/memberinfo"
     end
   end
 
