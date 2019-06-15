@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
 
-  devise_for :users, controllers: { omniauth_callbacks: 'users/omniauth_callbacks', registrations: 'users/registrations' }
+  devise_for :users, controllers: { 
+    omniauth_callbacks: 'users/omniauth_callbacks',
+    registrations: 'users/registrations' }
   
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 
@@ -11,6 +13,13 @@ Rails.application.routes.draw do
       get 'purchasing'
     end
   end
+
+  devise_scope :user do
+    constraint = lambda do |request|
+      request.env["devise.mapping"] = Devise.mappings[scope]
+      true
+  end
+end
 
   resources :users do
 
