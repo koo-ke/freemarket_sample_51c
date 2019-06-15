@@ -12,9 +12,6 @@
                   %span.form-require 必須
                 %p 最大10枚までアップロードできます
                 .exhibition-dropbox-container.clearfix.state-image-number-10
-                  -# .exhibition-upload-items-container
-                  -#   .exhibition-upload-items.have-item-0
-                  -#     %ul
                   .previews-container
                     - @product.images.each do |image|
                       .image_box
@@ -149,4 +146,5 @@
                 = f.submit "変更する", class:"btn-default btn-red"   
                 = link_to '/' do
                   .btn-default.btn-gray
-                    もどる              
+                    もどる
+        
