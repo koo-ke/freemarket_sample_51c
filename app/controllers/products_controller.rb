@@ -30,11 +30,11 @@ class ProductsController < ApplicationController
   end
 
   def show
-    @product = Product.find(42)       #商品情報
-    @user = User.find(1)                                               #ユーザー情報
-    @address = Address.find(1)                                         #住所情報
-    @prefecture = Prefecture.find(25)   #都道府県
-    @item_status = ItemStatus.find(3)           #商品の状態（新品など）
+    @product = Product.find(params[:id])
+    @saler = User.find(id= @product.saler_id)
+    @prefecture = Prefecture.find(@product.shipping_origin_area_was)
+    @item_status = ItemStatus.find(@product.item_status_was)
+
   end
   
   def new
@@ -48,7 +48,7 @@ class ProductsController < ApplicationController
     Product.create!(product_params)
     # save的な何か
     redirect_to root_path
-    # binding.pry
+    binding.pry
   end
 
   def purchasing
