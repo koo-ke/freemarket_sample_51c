@@ -12,17 +12,22 @@
                   %span.form-require 必須
                 %p 最大10枚までアップロードできます
                 .exhibition-dropbox-container.clearfix.state-image-number-10
-                  .exhibition-upload-items-container
-                    .exhibition-upload-items.have-item-0
-                      %ul
+                  -# .exhibition-upload-items-container
+                  -#   .exhibition-upload-items.have-item-0
+                  -#     %ul
+                  .previews-container
+                    - @product.images.each do |image|
+                      .image_box
+                        = image_tag image.variant(resize: "100x100")
+                        = hidden_field_tag :hoge, image.id, name: 'image[]'
+                        .remove_btn 削除
                   %label.exhibition-upload-drop-box.have-item-0
-                    = f.file_field :images, multiple: true, class: 'hidden'
+                    = f.file_field :images, multiple: true, class: 'hidden',id: 'product_image'
                     %input.exhibition-upload-drop-file{:multiple => "multiple", :name => "image1", :style => "display: none;", :type => "file"}
                     %pre.visible-pc
                       :preserve
                         ドラッグアンドドロップ
                         またはクリックしてファイルをアップロード
-
               .sell-content
                 .form-group
                   %label
