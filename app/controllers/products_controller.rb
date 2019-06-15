@@ -38,6 +38,10 @@ class ProductsController < ApplicationController
 
   def update
     @product = Product.find(params[:id])
+    images = @product.images.where.not(id: params[:image])
+    images.each do |image|
+      image.purge
+    end
     @product.update(product_params)
     redirect_to root_path
   end
@@ -47,3 +51,4 @@ class ProductsController < ApplicationController
     params.require(:product).permit(:name, :price, :publish_status, :text, :size, :shipping_charges, :shipping_origin_area, :days_to_ship, :buyer_id, :item_status, images: []).merge(saler_id: 1)
   end
 end
+
