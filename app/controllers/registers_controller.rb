@@ -1,18 +1,18 @@
 class RegistersController < ApplicationController
- 
- def memberinfo
- end
 
- def numberverification
- end
+  def memberinfo
+  end
 
- def memberaddfress
- end
- 
- def payment
- end
+  def numberverification
+  end
 
- def completion
- end
+  def memberaddfress
+  end
+
+  def payment
+  end
+
+  def completion
+  end
 
 end

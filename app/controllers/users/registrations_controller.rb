@@ -10,6 +10,7 @@ class Users::RegistrationsController < Devise::RegistrationsController
        # binding.pry
        sns = SnsCredential.update(user_id:  @user.id)
      else #email登録なら
+      redirect_to numberverification_registers_path and return
        # binding.pry
        super
      end
