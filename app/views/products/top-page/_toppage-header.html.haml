@@ -26,24 +26,25 @@
                   = link_to do
                     = fa_icon 'tag', class: 'icon3'
                     %span.header-bottom__brand ブランドから探す
-          .top-header-signup-btn
-            = link_to '/users/signup' ,class:"signup-link"do
-              %span.top-header-signup-btn__font
-                新規会員登録
-          .top-header-login
-            = link_to '/users/login', class:"login-link" do
-              %span.top-header-login__font
-                ログイン
-          -# .header-notification
-          -#   = link_to '#' do
-          -#     = fa_icon 'bell', class: 'icon4' 
-          -#     %span.header-bottom__notification お知らせ
-          -# .header-todo
-          -#   = link_to '#' do
-          -#     =fa_icon 'check', class: 'icon5'
-          -#     %span.header-bottom__todo やることリスト
-          -# .header-mypage
-          -#   = link_to '/users' do
-          -#     = image_tag '//static.mercdn.net/images/member_photo_noimage_thumb.png', class: 'header-mypage-image', src: "", width: "32", height: "32"
-          -#     %span.header-bottom__mypage マイページ
-              
+          - if user_signed_in?
+            .header-notification
+              = link_to '#' do
+                = fa_icon 'bell', class: 'icon4' 
+                %span.header-bottom__notification お知らせ
+            .header-todo
+              = link_to '#' do
+                =fa_icon 'check', class: 'icon5'
+                %span.header-bottom__todo やることリスト
+            .header-mypage
+              = link_to '/users' do
+                = image_tag '//static.mercdn.net/images/member_photo_noimage_thumb.png', class: 'header-mypage-image', src: "", width: "32", height: "32"
+                %span.header-bottom__mypage マイページ
+          - else
+            .top-header-signup-btn
+              = link_to '/users/signup' ,class:"signup-link"do
+                %span.top-header-signup-btn__font
+                  新規会員登録
+            .top-header-login
+              = link_to '/users/login', class:"login-link" do
+                %span.top-header-login__font
+                  ログイン
