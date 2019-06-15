@@ -57,6 +57,20 @@ class ProductsController < ApplicationController
   def edit
   end
 
+
+  def update
+    @product = Product.find(params[:id])
+    images = @product.images.where.not(id: params[:image])
+    images.each do |image|
+      image.purge
+    end
+    if @product.update(product_params)
+      redirect_to root_path
+    else
+      redirect_to edit_product_path
+    end
+  end
+
   def destroy
     if @product.saler_id == current_user.id
       @product.destroy
