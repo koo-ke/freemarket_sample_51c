@@ -51,9 +51,6 @@ class ProductsController < ApplicationController
     binding.pry
   end
 
-  def purchasing
-  end
-
   def edit
   end
 
