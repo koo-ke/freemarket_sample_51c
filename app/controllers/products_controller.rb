@@ -60,7 +60,7 @@ class ProductsController < ApplicationController
     # save的な何か
     redirect_to root_path
   end
-
+  
   def edit
   end
 
