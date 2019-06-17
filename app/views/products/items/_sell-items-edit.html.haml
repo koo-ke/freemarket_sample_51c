@@ -5,24 +5,26 @@
         %div
           .sell-container-inner
             %h2.exhibition-head 商品の情報を入力
-            = form_with(model: @product, method: :post, local: true) do |f|              
+            = form_with(model: @product, method: :patch, local: true) do |f|             
               .exhibition-upload-box
                 %h3.exhibition-upload-head
                   出品画像
                   %span.form-require 必須
                 %p 最大10枚までアップロードできます
                 .exhibition-dropbox-container.clearfix.state-image-number-10
-                  .exhibition-upload-items-container
-                    .exhibition-upload-items.have-item-0
-                      %ul
+                  .previews-container
+                    - @product.images.each do |image|
+                      .image_box
+                        = image_tag image.variant(resize: "100x100")
+                        = hidden_field_tag :hoge, image.id, name: 'image[]'
+                        .remove_btn 削除
                   %label.exhibition-upload-drop-box.have-item-0
-                    = f.file_field :images, multiple: true, class: 'hidden'
+                    = f.file_field :images, multiple: true, class: 'hidden',id: 'product_image'
                     %input.exhibition-upload-drop-file{:multiple => "multiple", :name => "image1", :style => "display: none;", :type => "file"}
                     %pre.visible-pc
                       :preserve
                         ドラッグアンドドロップ
                         またはクリックしてファイルをアップロード
-
               .sell-content
                 .form-group
                   %label
@@ -111,7 +113,7 @@
                         .l-right.sell-price-input#product_price
                           ¥
                           %div
-                            = f.text_field :price, placeholder: "例）300", value: "", class: "input-default" ,id:"product_price"
+                            = f.text_field :price, placeholder: "例）300", value: "#{@product.price}", class: "input-default" ,id:"product_price"
                     %li.clearfix
                       .l-left
                         販売手数料 (10%)
@@ -141,7 +143,8 @@
                       加盟店規約
                     に同意したことになります。
 
-                = f.submit "出品する", class:"btn-default btn-red"   
+                = f.submit "変更する", class:"btn-default btn-red"   
                 = link_to '/' do
                   .btn-default.btn-gray
-                    もどる              
+                    もどる
+        

@@ -5,9 +5,8 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable,
          :omniauthable, omniauth_providers: [:facebook, :google_oauth2]
 
-  # 暫定的にコメントアウト中(↓城戸、6/2)
-  # validates :email, presence: true
-  # validates :nickname, presence: true 
+  validates :email, presence: true
+  validates :nickname, presence: true 
   has_many :sns_credentials, dependent: :destroy
 
     def self.find_oauth(auth)
