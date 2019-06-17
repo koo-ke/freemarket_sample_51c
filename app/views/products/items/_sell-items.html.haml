@@ -12,16 +12,37 @@
                   %span.form-require 必須
                 %p 最大10枚までアップロードできます
                 .exhibition-dropbox-container.clearfix.state-image-number-10
-                  .exhibition-upload-items-container
-                    .exhibition-upload-items.have-item-0
-                      %ul
-                  %label.exhibition-upload-drop-box.have-item-0
-                    = f.file_field :images, multiple: true, class: 'hidden'
-                    %input.exhibition-upload-drop-file{:multiple => "multiple", :name => "image1", :style => "display: none;", :type => "file"}
-                    %pre.visible-pc
+
+                  -# -# id "file"で、fileとdivを紐付けクリック時に連動
+                  -# #img_field{:onclick => "$('#file').click()"}
+                  -#   -# 画像があるときは画像を表示する
+                  -# - if @product.images.present?
+                  -#   = image_tag(@product.images.url)
+                  -# - else
+                  -#   -# %i.fas.fa-image
+                  -#   -# %i.fas.fa-file-upload.add
+                  -# %label.exhibition-upload-drop-box.have-item-0
+                  -#   = f.file_field :images, multiple: true, class: 'hidden', style: "display:none;", id: "file"
+                  -#   %input.exhibition-upload-drop-file{:multiple => "multiple", :name => "image1", :style => "display: none;", :type => "file"}
+                  -#   %pre.visible-pc
+                  -#     :preserve
+                  -#       ドラッグアンドドロップ
+                  -#       またはクリックしてファイルをアップロード
+
+                  .exhibition-upload-drop-box.have-item-0   
+                  
+                    #img_field{:onclick => "$('#file').click()"}
+                      - if @product.images.present?
+                        = image_tag(@product.images.url)
+                      - else
+                        %i  ドラッグアンドドロップまたはクリックしてファイルをアップロード
+
                       :preserve
                         ドラッグアンドドロップ
                         またはクリックしてファイルをアップロード
+                    // id "file"をつけ、「display:none;」で隠す
+                    = f.file_field :images, multiple: true, class: 'hidden', style: "display:none;", id: "file"
+
 
               .sell-content
                 .form-group

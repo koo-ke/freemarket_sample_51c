@@ -48,12 +48,11 @@ class ProductsController < ApplicationController
     Product.create!(product_params)
     # save的な何か
     redirect_to root_path
-    binding.pry
+    # binding.pry
   end
 
   def purchasing
   end
-
   def edit
   end
 
