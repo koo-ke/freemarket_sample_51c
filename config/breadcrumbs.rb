@@ -7,6 +7,11 @@ crumb :mypage do
   parent :root
 end
 
+crumb :product do |product|
+  link product.name
+  parent :root
+end
+
 crumb :paying do
   link "支払い方法", paying_users_path
   parent :mypage
