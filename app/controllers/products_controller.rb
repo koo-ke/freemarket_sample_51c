@@ -29,9 +29,6 @@ class ProductsController < ApplicationController
     redirect_to root_path
   end
 
-  def purchasing
-  end
-
   def edit
     @product = Product.find(params[:id])
     # binding.pry

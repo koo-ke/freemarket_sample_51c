@@ -1,0 +1,101 @@
+.card_information_content {
+  float: right;
+  background: #fff;
+  width: 700px;
+  height: 1200px;
+  &__title {
+    font-size: 24px;
+    padding: 8px 24px;
+    font-weight: bold;
+    text-align: center;
+    border-bottom: 2px solid #f5f5f5;
+    color: #333;
+  }
+  .form_content {
+    padding: 40px;
+  }
+  .inner {
+    max-width: 320px;
+    margin: 0 auto;
+  }
+  .form-group {
+    margin: 40px 0 0;
+  }
+  .form-group:first-of-type {
+    margin: 0;
+  }
+  label {
+    font-size: 14px;
+    font-weight: 600;
+  }
+  span {
+    background: #ea352d;
+    margin: 0 0 0 8px;
+    padding: 2px 4px;
+    border-radius: 2px;
+    color: #fff;
+    font-size: 12px;
+    vertical-align: top;
+  }
+  .expire-text {
+    color: #333;
+    background-color: #fff;
+    float: right;
+    bottom: 40%;
+  }
+  .input-number {
+    width: 100%;
+    margin: 8px 0 0;
+    padding: 10px 16px 8px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    background: #fff;
+    line-height: 1.5;
+    font-size: 16px;
+  }
+  .card-list {
+    margin: 8px 0 0;
+  }
+  li {
+    display: inline-block;
+    margin: 0 0 0 8px;
+    vertical-align: middle;
+  }
+  .cards-expire__wrap {
+    // display: inline-block;
+    margin: 8px 0 0;
+    width: 35%;
+  }
+
+  .input-expire {
+    width: 100%;
+    position: relative;
+    z-index: 2;
+    height: 48px;
+    padding: 0 16px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    background: 0;
+    font-size: 16px;
+    line-height: 1.5;
+    cursor: pointer;
+  }
+    .btn-red {
+      background: #ea352d;
+      border: 1px solid #ea352d;
+      color: #fff;
+    }
+    .btn-default {
+      margin: 40px 0 0 0;
+      display: block;
+      width: 100%;
+      line-height: 48px;
+      font-size: 14px;
+      border: 1px solid transparent;
+      -webkit-transition: all ease-out .3s;
+      transition: all ease-out .3s;
+      cursor: pointer;
+      text-align: center;
+      }
+    }
+  
