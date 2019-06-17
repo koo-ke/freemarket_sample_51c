@@ -1,0 +1,47 @@
+= render 'products/top-page/toppage-header'
+.wrapper
+  = render 'products/mypage/mypage-header/paying-header'
+  .margin
+    = render 'products/mypage/side-bar'
+    .card_information_content
+      .card_information_content__title クレジットカード情報入力
+      .form_content
+        .inner
+          = form_with url: pay_card_index_path, method: :post, id: 'charge-form', html: { name: "inputForm" } do |f|
+            .form-group
+              = f.label :カード番号, class: 'label'
+              %span 必須
+              = f.text_field :card_number, type: 'text', class: 'input-number', placeholder: '半角数字のみ', maxlength: "16"
+              %ul.card-list
+                %li
+                  = image_tag "visa.svg", height: "20", width: "49"
+                %li
+                  = image_tag "master-card.svg", height: "20", width: "34"
+                %li
+                  = image_tag "saison-card.svg", height: "20",  width: "30"
+                %li
+                  = image_tag "jcb.svg", height: "20", width: "32"
+                %li
+                  = image_tag "american_express.svg", height: "20", width: "21"
+                %li
+                  = image_tag "dinersclub.svg", height: "20", width: "32"
+                %li
+                  = image_tag "discover.svg", height: "20", width: "32"
+            .form-group
+              = f.label :有効期限, class: 'label'
+              %span 必須
+              %br
+              .cards-expire__wrap
+                = f.select :exp_month, [["01",1],["02",2],["03",3],["04",4],["05",5],["06",6],["07",7],["08",8],["09",9],["10",10],["11",11],["12",12]],{} , class: 'input-expire'
+                %span.expire-text 月
+              .cards-expire__wrap
+                = f.select :exp_year, [["19",2019],["20",2020],["21",2021],["22",2022],["23",2023],["24",2024],["25",2025],["26",2026],["27",2027],["28",2028],["29",2029]],{} , class: 'input-expire'
+                %span.expire-text 年
+            .form-group
+              .cards-expire
+                = f.label :セキュリティコード, class: 'label'
+                %span 必須
+                = f.text_field :cvc, type: 'text', class: 'input-number', placeholder: 'カード背面4桁もしくは3桁の番号', maxlength: "4"
+            .btn-default#card_token
+              = f.submit '追加する', class: 'btn-red', id: 'token_submit'
+= render 'products/top-page/toppage-footer'

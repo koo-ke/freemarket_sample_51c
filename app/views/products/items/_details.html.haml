@@ -19,7 +19,7 @@
           %tr
             %th 出品者
             %td
-              = link_to '/' do
+              = link_to '#' do
                 = @saler.nickname
               .rate-icons
                 = fa_icon "fas", class: "fa-smile-o"
@@ -31,20 +31,20 @@
           %tr
             %th カテゴリー
             %td
-              = link_to '/' do
+              = link_to '#' do
                 レディース
               %br 
-              = link_to '/' do
+              = link_to '#' do
                 = fa_icon "fas", class: "fa-chevron-right"
                 バッグ
               %br 
-              = link_to '/' do
+              = link_to '#' do
                 = fa_icon "fas", class: "fa-chevron-right"
                 ショルダーバック
           %tr
             %th ブランド
             %td
-              = link_to '/' do
+              = link_to '#' do
                 コーチ
           %tr
             %th 商品の状態
@@ -60,7 +60,7 @@
           %tr
             %th 配送元地域
             %td
-              = link_to '/' do
+              = link_to '#' do
                 = @prefecture.name
           %tr
             %th 発送日の目安
@@ -81,15 +81,15 @@
       %p
         = @product.text
     .item-detail-confirmation-buttom
-      = link_to '/' do
+      = link_to '#' do
         .item-detail-confirmation-buttom-like
           = fa_icon "far", class: "fa-heart" 
           いいね! 0
-      = link_to '/' do
+      = link_to '#' do
         .item-detail-confirmation-buttom-report
           = fa_icon "far", class: "fa-flag"
           不適切な商品報告
-      = link_to '/' do
+      = link_to '#' do
         .item-detail-confirmation-buttom-approach
           = fa_icon "fas", class: "fa-lock"
           あんしん・あんぜんへの取り組み
@@ -100,39 +100,39 @@
         %p
           相手のことを考え丁寧なコメントを心がけましょう。不快な言葉遣いなどは利用制限や退会処分となることがあります。
       %textarea
-      = link_to '/' do
+      = link_to '#' do
         .item-comment-btn
           コメントする
   %ul.item-link
     %li.prev
-      = link_to '/' do
+      = link_to '#' do
         = fa_icon "fas", class: "fa-chevron-left"
         アルマーニエクスチェンジ
     %li.next
-      = link_to '/' do
+      = link_to '#' do
         littletalks様送料
         = fa_icon "fas", class: "fa-chevron-right"
   .item-sns-box
     %ul.sns-box
       %li.facebook
-        = link_to '/' do
+        = link_to '#' do
           = fa_icon "fas", class: "fa-facebook-square"
       %li.twitter
-        = link_to '/' do
+        = link_to '#' do
           = fa_icon "fas", class: "fa-twitter-square"
       %li.pinterest
-        = link_to '/' do
+        = link_to '#' do
           = fa_icon "fas", class: "fa-pinterest-square"
     %p.delete-btn
       = link_to  product_path(@product), class: "gray-delete", method: :delete do
         この商品を削除する
       
   %h2
-    = link_to '/' do
+    = link_to '#' do
       Siaさんのその他の出品
   %section.item-_other_box
     .other_items
-      = link_to '/' do
+      = link_to '#' do
         .other_item
           .other_item-img
             = image_tag("https://static.mercdn.net/thumb/photos/m58136755934_1.jpg?1559516733", class: "other-photos")
@@ -220,11 +220,11 @@
           %p.other_item-tax
             (税込)
   %h2.item-second-name
-    = link_to '/' do
+    = link_to '#' do
       コーチ ショルダーバッグ その他の出品
   %section.item-_other_box
     .other_items
-      = link_to '/' do
+      = link_to '#' do
         .other_item
           .other_item-img
             = image_tag("https://static.mercdn.net/thumb/photos/m58136755934_1.jpg?1559516733", class: "other-photos")

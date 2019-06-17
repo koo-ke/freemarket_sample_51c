@@ -66,8 +66,11 @@
                       %span.form-require 必須
                     %div
                       .select-wrap
-                        = f.collection_select :category_ids, Category.all, :id, :name, {prompt: "---"},{class:"select-default"} 
+                        = f.collection_select :category_ids, Category.where(ancestry: nil), :id, :name, {prompt: "---"},{class:"select-default"} 
                         = fa_icon "fas", class: "fa-angle-down"
+                      .select-wrap2
+                      .select-wrap3
+
 
                   .form-group
                     %label
@@ -116,14 +119,14 @@
                         %label.l-left
                           価格
                           %span.form-require 必須
-                        .l-right.sell-price-input#product_price
+                        .l-right2.sell-price-input#product_price
                           ¥
                           %div
                             = f.text_field :price, placeholder: "例）300", value: "", class: "input-default" ,id:"product_price"
                     %li.clearfix
                       .l-left
                         販売手数料 (10%)
-                      .l-right -
+                      .l-right-10 -
                     %li.clearfix.bold
                       .l-left 販売利益
                       .l-right -
@@ -132,20 +135,20 @@
               .sell-content.sell-btn-box
                 %div
                   %p.notes
-                    = link_to '/' do
+                    = link_to '#' do
                       禁止されている出品
                     、
-                    = link_to '/' do
+                    = link_to '#' do
                       行為
                     を必ずご確認ください。
                   %p.notes
                     またブランド品でシリアルナンバー等がある場合はご記載ください。
-                    = link_to '/' do
+                    = link_to '#' do
                       偽ブランドの販売
                     は犯罪であり処罰される可能性があります。
                   %p.notes
                     また、出品をもちまして
-                    = link_to '/' do
+                    = link_to '#' do
                       加盟店規約
                     に同意したことになります。
 
