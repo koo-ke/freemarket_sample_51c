@@ -40,7 +40,18 @@ class ProductsController < ApplicationController
   def new
     @product = Product.new
     @product.product_categories.build #城戸追記(6/14)
-    # @product.categories.build #城戸追記(6/14)
+
+    # @parents = Category.where(id:1,id:15,id:29)
+  end
+
+  def search
+    respond_to do |format|
+      format.html
+      format.json do
+       @children = Category.find(params[:parent_id]).children
+       #親ボックスのidから子ボックスのidの配列を作成してインスタンス変数で定義
+      end
+    end
   end
 
   def create
@@ -49,7 +60,7 @@ class ProductsController < ApplicationController
     # save的な何か
     redirect_to root_path
   end
-
+  
   def edit
   end
 
