@@ -1,3 +1,5 @@
+$(document).on('turbolinks:render', function(){
+
 $(function(){
   $fileField = $('#file')
  
@@ -20,4 +22,6 @@ $(function(){
     })(file);
     reader.readAsDataURL(file);
   });
+});
+
 });
