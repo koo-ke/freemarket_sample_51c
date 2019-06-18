@@ -10,13 +10,11 @@
           .product--soldout-badge
             .product--soldout
         .item-detail-confirmation-content-photos
-          -# 複数枚の保存ができるまでお預け ↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓
           = image_tag @product.images.first , class: "photos"
-          = image_tag @product.images.first , class: "photos"
-          = image_tag @product.images.first , class: "photos"
-          = image_tag @product.images.first , class: "photos"
-          = image_tag @product.images.first , class: "photos" 
-          -# 複数枚の保存ができるまでお預け ↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑
+          = image_tag @product.images.second , class: "photos"
+          = image_tag @product.images.third , class: "photos"
+          = image_tag @product.images.fourth , class: "photos"
+          = image_tag @product.images.fifth , class: "photos" 
       %table
         %tbody
           %tr
