@@ -10,11 +10,8 @@
           .product--soldout-badge
             .product--soldout
         .item-detail-confirmation-content-photos
-          = image_tag @product.images.first , class: "photos"
-          = image_tag @product.images.second , class: "photos"
-          = image_tag @product.images.third , class: "photos"
-          = image_tag @product.images.fourth , class: "photos"
-          = image_tag @product.images.fifth , class: "photos" 
+          - @product.images.each do |image|
+            = image_tag image, class: "photos"
       %table
         %tbody
           %tr

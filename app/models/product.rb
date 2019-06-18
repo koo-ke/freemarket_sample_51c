@@ -10,6 +10,7 @@ class Product < ApplicationRecord
   validates :days_to_ship,         presence: true
   validates :saler_id,             presence: true
   # validates :buyer_id,             presence: true
+  validates :images,  length: {maximum: 10}
 
   has_many :product_categories, dependent: :destroy
   has_many :categories,            through: :product_categories
