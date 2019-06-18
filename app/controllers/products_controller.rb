@@ -48,7 +48,6 @@ class ProductsController < ApplicationController
     Product.create!(product_params)
     # save的な何か
     redirect_to root_path
-    binding.pry
   end
 
   def edit
@@ -83,7 +82,7 @@ class ProductsController < ApplicationController
   end
 
   def product_params
-    params.require(:product).permit(:name, :price, :publish_status, :text, :size, :shipping_charges, :shipping_origin_area, :days_to_ship, :item_status, :category_ids, images: []).merge(saler_id: 1)
+    params.require(:product).permit(:name, :price, :buyer_id, :publish_status, :text, :size, :shipping_charges, :shipping_origin_area, :days_to_ship, :item_status, :category_ids, images: []).merge(saler_id: 1)
   end
 
 
