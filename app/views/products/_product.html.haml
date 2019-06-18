@@ -7,7 +7,8 @@
       = product.name
     .item-box__info
       %h5.item-box__price 
-        = product.price
+        ¥
+        = converting_to_jpy(product.price)
       %h8.likes-icon= fa_icon 'heart'
       %h8.likes-count 
         -# = product.likes.count

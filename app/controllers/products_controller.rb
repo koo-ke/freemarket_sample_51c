@@ -8,7 +8,7 @@ class ProductsController < ApplicationController
     @category1.map{|category| @tempitems1 << category.products}
     @tempitems2 = @tempitems1.flatten
     @tempitems3 = Product.where(id: @tempitems2.map{ |item| item.id })
-    @products1 = @tempitems3.last(4)
+    @products1 = @tempitems3.order("created_at DESC").last(4)
     # 元々
     # @category1 = Category.find(1)
     # @products1 = @category1.products.recent
