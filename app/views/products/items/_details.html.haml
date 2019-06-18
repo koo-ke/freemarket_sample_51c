@@ -77,8 +77,9 @@
         (税込)
       .item-detail-confirmation-price_box-shipping
         送料込み
+
     - if @product.buyer_id == 0
-      = link_to purchase_index_path do
+      = link_to purchase_path do
         .item-detail-confirmation-buy_btn
           購入画面に進む
     - else

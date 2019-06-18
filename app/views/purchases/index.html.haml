@@ -1,3 +1,4 @@
+= render 'products/member-registration/header'
 .purchasing-top
   %header.single--header
   .single-main__container
@@ -5,11 +6,12 @@
     .purchase-content
       .purchase-content__inner
         %h3.purchase-content__inner--image
-          %img.lazyload{alt: "", "data-src": "m74984987358_1", height: "148", width: "112"}/
+          = image_tag @product.images.first , class: "photo", height: "148", width: "112"
         %p.purchase-content__inner--name ２つ折り財布
-        %form.buy-form
-          %p.purchase-content__inner--price
-            ¥ 999
+        .buy-form
+          %p.purchase-content__inner--price 
+            ¥
+            = converting_to_jpy(@product.price)
             %span.purchase-content__inner--shippingfee 送料込み
           %ul.accordion
             .accordion__toggle
@@ -18,9 +20,10 @@
             .buy-price-table__row
               .buy-price-table__row--text 支払い金額
               .buy-price-table__row--cell
-                %span ¥ 999
-          = form_with model:@user do |f|
-            = f.submit "購入する", class:"purchasing-btn"
+                ¥
+                = converting_to_jpy(@product.price)
+          = form_with url: pay_purchase_path, method: :post, local: true  do |f|
+            = f.submit "購入する", class:"purchasing-btn",data: { confirm: "本当に購入しますか？" }
 
     %section.userinfo-content
       .userinfo-content__inner
@@ -54,3 +57,5 @@
               %span 変更する
               %i.fa.fa-chevron-right
   %footer.single-footer
+
+= render 'products/member-registration/footer'
