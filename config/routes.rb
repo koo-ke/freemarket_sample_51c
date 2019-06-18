@@ -8,7 +8,11 @@ Rails.application.routes.draw do
 
   root 'products#index'
   
-  resources :products
+  resources :products do
+    collection do
+      get 'search'
+    end
+  end
 
   resources :card, only: [:new, :show] do
     collection do

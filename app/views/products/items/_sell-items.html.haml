@@ -44,7 +44,7 @@
                       カテゴリー
                       %span.form-require 必須
                     %div
-                      .select-wrap
+                      .select-wrap1
                         = f.collection_select :category_ids, Category.where(ancestry: nil), :id, :name, {prompt: "---"},{class:"select-default"} 
                         = fa_icon "fas", class: "fa-angle-down"
                       .select-wrap2
