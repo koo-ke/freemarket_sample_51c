@@ -45,10 +45,19 @@ class ProductsController < ApplicationController
   end
 
   def search
+
     respond_to do |format|
       format.html
       format.json do
+      if params[:parent_id]
        @children = Category.find(params[:parent_id]).children
+      else
+       @grandchildren = Category.find(params[:children_id]).children
+      end
+     
+       #  binding.pry
+
+
        #親ボックスのidから子ボックスのidの配列を作成してインスタンス変数で定義
       end
     end

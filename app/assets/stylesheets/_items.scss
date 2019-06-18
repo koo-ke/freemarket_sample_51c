@@ -716,6 +716,10 @@ textarea {
   position: relative;
   background: #fff;
 }
+.select-wrap1 {
+  position: relative;
+  background: #fff;
+}
 .form-group select {
   width: 100%;
 }
@@ -736,6 +740,15 @@ select {
   -webkit-appearance: none;
 }
 .select-wrap .fa-angle-down {
+  position: absolute;
+  right: 16px;
+  top: 50%;
+  z-index: 2;
+  color: #888;
+  font-size: 28px;
+  transform: translate(0, -50%);
+}
+.select-wrap1 .fa-angle-down {
   position: absolute;
   right: 16px;
   top: 50%;
