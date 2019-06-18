@@ -153,6 +153,32 @@
   min-width: 300px;
   max-width: 300px;
   min-height: 375px;
+  //向川追記(6/18) 商品詳細ページで商品の画像を売約済と表示させる
+  position: relative;
+  .product--soldout-badge::before {
+    content:'';
+    position: absolute;
+    top: 0;
+    height: 0;
+    width: 0;
+    border: 70px solid transparent;
+    border-top-color: #ea352d;
+    border-left-color: #ea352d;
+    z-index: 30;
+  }
+  .product--soldout::after {
+    content:'SOLD';
+    text-align: center;
+    position: absolute;
+    top: 30px;
+    width: 85px;
+    z-index: 50;
+    color: #fff;
+    font-size: 24px;
+    font-weight: 600;
+    transform: rotate(-45deg);
+  }
+  // 
   .item-detail-confirmation-content-photos {
     font-size:0;
     width: 300px;
@@ -265,6 +291,19 @@ td {
   height: 60px;
   line-height: 60px;
 }
+//向川追記(6/18) 商品詳細ページ編集 「売り切れましたボタン」
+.item-detail-confirmation-sold_btn {
+  display: block;
+  margin: 16px 0 0;
+  background: #888;
+  color: #fff;
+  text-align: center;
+  font-weight: 600;
+  font-size: 24px;
+  height: 60px;
+  line-height: 60px;
+}
+// 
 a {
   text-decoration: none;
   color: #0099e8;
@@ -1053,4 +1092,32 @@ li {
   max-height: 100%;
   width: auto;
   height: auto;
+}
+
+//向川追記(6/18) トップページで商品の画像を売約済と表示させる
+.item-box__photo {
+  position: relative;
+  .product--soldout-badge::before {
+    content:'';
+    position: absolute;
+    top: 0;
+    height: 0;
+    width: 0;
+    border: 60px solid transparent;
+    border-top-color: #ea352d;
+    border-left-color: #ea352d;
+    z-index: 30;
+  }
+  .product--soldout::after {
+    content:'SOLD';
+    text-align: center;
+    position: absolute;
+    top: 30px;
+    width: 85px;
+    z-index: 50;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 600;
+    transform: rotate(-45deg);
+  }
 }
