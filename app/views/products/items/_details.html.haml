@@ -73,8 +73,12 @@
       .item-detail-confirmation-price_box-shipping
         送料込み
 
-    - if @product.buyer_id == 0
+    - if @product.buyer_id == 0 && user_signed_in?
       = link_to purchase_path do
+        .item-detail-confirmation-buy_btn
+          購入画面に進む
+    - elsif @product.buyer_id == 0
+      = link_to login_users_path do
         .item-detail-confirmation-buy_btn
           購入画面に進む
     - else
