@@ -91,7 +91,7 @@ $(function() {
 // -----------------------カテゴリ選択----------------------------
 
 // -----------------------販売価格表示----------------------------
-    $(".input-default").on("keyup", function() {
+    $(".input-default2").on("keyup", function() {
       var val = $(this).val();
       if ( val >= 300 && val <= 9999999) {
         var fee = Math.floor(val / 10)
