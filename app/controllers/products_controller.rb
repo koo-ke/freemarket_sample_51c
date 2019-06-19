@@ -38,10 +38,14 @@ class ProductsController < ApplicationController
   end
   
   def new
-    @product = Product.new
-    @product.product_categories.build #城戸追記(6/14)
-
-    # @parents = Category.where(id:1,id:15,id:29)
+    if user_signed_in?
+      @product = Product.new
+      @product.product_categories.build #城戸追記(6/14)
+    else 
+      flash[:notice] = "ログインしてください" 
+      redirect_to login_users_path
+    end  
+      # @parents = Category.where(id:1,id:15,id:29)
   end
 
   def search
