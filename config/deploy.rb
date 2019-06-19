@@ -8,9 +8,9 @@ set :default_env, {
   rbenv_root: "/usr/local/rbenv",
   path: "/usr/local/rbenv/shims:/usr/local/rbenv/bin:$PATH",
   BASIC_AUTH_USER: ENV["BASIC_AUTH_USER"],
-  BASIC_AUTH_PASSWORD: ENV["BASIC_AUTH_PASSWORD"]
-  PAYJP_PRIVATE_KEY: ENV["PAYJP_PRIVATE_KEY"]
-  PAYJP_KEY: ENV["PAYJP_KEY"]
+  BASIC_AUTH_PASSWORD: ENV["BASIC_AUTH_PASSWORD"],
+  PAYJP_PRIVATE_KEY: ENV["PAYJP_PRIVATE_KEY"],
+  PAYJP_KEY: ENV["PAYJP_KEY"],
 }
 
 set :linked_files, %w{ config/application.yml }
