@@ -32,6 +32,11 @@ crumb :logout do
   parent :mypage
 end
 
+crumb :credit_card do
+  link "クレジットカード情報入力", new_card_path
+  parent :paying
+end
+
 # crumb :projects do
 #   link "Projects", projects_path
 # end
