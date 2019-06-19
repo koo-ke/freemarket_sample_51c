@@ -30,15 +30,8 @@
             %th カテゴリー
             %td
               = link_to '#' do
-                レディース
-              %br 
-              = link_to '#' do
                 = fa_icon "fas", class: "fa-chevron-right"
-                バッグ
-              %br 
-              = link_to '#' do
-                = fa_icon "fas", class: "fa-chevron-right"
-                ショルダーバック
+                = @category.name
           %tr
             %th ブランド
             %td

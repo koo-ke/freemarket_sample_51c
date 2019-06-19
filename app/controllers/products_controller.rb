@@ -34,6 +34,7 @@ class ProductsController < ApplicationController
     @saler = User.find(id= @product.saler_id)
     @prefecture = Prefecture.find(@product.shipping_origin_area_was)
     @item_status = ItemStatus.find(@product.item_status_was)
+    @category = Category.find_by(id: @product.category_ids)
   end
   
   def new
