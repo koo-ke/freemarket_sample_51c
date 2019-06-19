@@ -1,4 +1,5 @@
 = render 'products/member-registration/header'
+
 .purchasing-top
   %header.single--header
   .single-main__container
@@ -7,7 +8,8 @@
       .purchase-content__inner
         %h3.purchase-content__inner--image
           = image_tag @product.images.first , class: "photo", height: "148", width: "112"
-        %p.purchase-content__inner--name ２つ折り財布
+        %p.purchase-content__inner--name
+          = @product.name
         .buy-form
           %p.purchase-content__inner--price 
             ¥
@@ -29,12 +31,15 @@
       .userinfo-content__inner
         %h3 配送先
         %address.userinfo-content__inner--text
-          〒556-0026
+          〒
+          = address_to_jpy(@address.postal_code)
           %br/
-          大阪府 大阪市浪速区浪速西
-          2-12-16
+          = @prefecture.name
+          = @address.city
+          = @address.address
           %br/
-          城戸 隆文
+          = @user.family_name
+          = @user.first_name
         %a.userinfo-content__inner--userinfofix{href: "/"}
           .userinfo-content--btn
             = link_to '#' do

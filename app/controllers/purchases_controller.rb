@@ -4,6 +4,11 @@ class PurchasesController < ApplicationController
 
   def index
     @product=Product.find(params[:id])
+
+    @user = User.find(id= current_user.id)
+    @address = @user.address
+    @prefecture = Prefecture.find(@address.prefecture_was)
+
     card = Card.where(user_id: current_user.id).first
     if card.blank?
       redirect_to controller: "card", action: "new"
