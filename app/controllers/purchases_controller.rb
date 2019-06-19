@@ -23,7 +23,8 @@ class PurchasesController < ApplicationController
     customer: card.customer_id,
     currency: 'jpy',
   )   
-    
+    @product = Product.find(params[:id])
+    @product.update(buyer_id: current_user.id)
     redirect_to root_path
   end
 
@@ -32,5 +33,6 @@ class PurchasesController < ApplicationController
   def set_product
     @product = Product.find(params[:id])
   end
+
 
 end
