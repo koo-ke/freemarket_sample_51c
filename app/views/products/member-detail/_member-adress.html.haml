@@ -30,24 +30,24 @@
           .form-group
             %label{for: "postal_code"} 郵便番号
             %span.form-require 必須
-            = f.text_field        :postal_code, class:'input-default', placeholder:  "例) 123-4567"
+            = f.text_field        :postal_code, class:'input-default', placeholder:  "例) 123-4567",required:"required"
           .form-group
             %label{for: "prefecture"} 都道府県
             %span.form-require 必須
             %br/
             .birthday-select-wrap
               .select-wrap
-                = f.collection_select :prefecture,  Prefecture.all, :id, :name,{prompt: "---"},{class:"select-default"} 
+                = f.collection_select :prefecture,  Prefecture.all, :id, :name,{prompt: "---"},class:"select-default", required:"required"
                 = fa_icon 'angle-down', class: 'angle-down'
             %input{name: "prefecture", type: "hidden",value: ""}/
           .form-group
             %label{for: "city"} 市区町村
             %span.form-require 必須
-            = f.text_field        :city, class: 'input-default',placeholder: "例) 横浜市緑区"
+            = f.text_field        :city, class: 'input-default',placeholder: "例) 横浜市緑区",required:"required"
           .form-group
             %label{for: "address"} 番地
             %span.form-require 必須
-            = f.text_field        :address, class:'input-default', placeholder: "例) 青山1-1-1"
+            = f.text_field        :address, class:'input-default', placeholder: "例) 青山1-1-1",required:"required"
           .form-group
             %label{for: "building"} 建物名
             %span.form-optional  任意
