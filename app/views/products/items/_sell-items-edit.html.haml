@@ -19,13 +19,27 @@
                         = image_tag image.variant(resize: "100x100")
                         = hidden_field_tag :hoge, image.id, name: 'image[]'
                         .remove_btn 削除
-                  %label.exhibition-upload-drop-box.have-item-0
-                    = f.file_field :images, multiple: true, class: 'hidden',id: 'product_image'
-                    %input.exhibition-upload-drop-file{:multiple => "multiple", :name => "image1", :style => "display: none;", :type => "file"}
-                    %pre.visible-pc
-                      :preserve
-                        ドラッグアンドドロップ
-                        またはクリックしてファイルをアップロード
+                  -# %label.exhibition-upload-drop-box.have-item-0
+                  -#   = f.file_field :images, multiple: true, class: 'hidden',id: 'product_image'
+                  -#   %input.exhibition-upload-drop-file{:multiple => "multiple", :name => "image1", :style => "display: none;", :type => "file"}
+                  -#   %pre.visible-pc
+                  -#     :preserve
+                  -#       ドラッグアンドドロップ
+                  -#       またはクリックしてファイルをアップロード
+                  .exhibition-upload-drop-box.have-item-0   
+                  
+                    #img_field{:onclick => "$('#file').click()"}
+                      #img_field_img
+                        - if @product.images.present?
+                          = image_tag(@product.images.first)
+                        - else
+                          %i  ドラッグアンドドロップまたはクリックしてファイルをアップロード
+
+                        :preserve
+                          ドラッグアンドドロップ
+                          またはクリックしてファイルをアップロード
+                      // id "file"をつけ、「display:none;」で隠す
+                    = f.file_field :images, multiple: true, class: 'hidden', style: "display:none;", id: "file"
                         
               .sell-content
                 .form-group
