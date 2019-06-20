@@ -85,9 +85,10 @@ class ProductsController < ApplicationController
       image.purge
     end
     if @product.update(product_params)
+      
       redirect_to root_path
     else
-      redirect_to edit_product_path
+      redirect_to action: :edit, notice: "全項目入力できていません"
     end
   end
 
