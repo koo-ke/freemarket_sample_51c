@@ -9,6 +9,9 @@ Rails.application.routes.draw do
   root 'products#index'
   
   resources :products do
+    member do
+      post 'edit', to: 'products#edit'
+    end
     collection do
       get 'search'
     end

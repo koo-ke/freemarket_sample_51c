@@ -497,6 +497,9 @@ h2:last-child {
   position: relative;
   background-color: #ccc;
 }
+
+
+
 .gray-delete {
   color: white;
   font-size: 14px;
@@ -960,9 +963,6 @@ li {
 }
 }
 
-
-
-
 .form-optional {
   margin: 0 0 0 8px;
   padding: 2px 4px;
@@ -1147,4 +1147,14 @@ li {
     font-weight: 600;
     transform: rotate(-45deg);
   }
+}
+
+.delete-btn2 {
+  width: 620px;
+  height: 50px;
+  margin: 30px auto;
+  background-color: #e9352c;
+  color: #fff;
+  line-height: 50px;
+  text-align: center;
 }

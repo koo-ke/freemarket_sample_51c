@@ -12,6 +12,7 @@
                   %span.form-require 必須
                 %p 最大10枚までアップロードできます
                 .exhibition-dropbox-container.clearfix.state-image-number-10
+
                   .previews-container
                     - @product.images.each do |image|
                       .image_box
@@ -25,6 +26,7 @@
                       :preserve
                         ドラッグアンドドロップ
                         またはクリックしてファイルをアップロード
+                        
               .sell-content
                 .form-group
                   %label
@@ -46,23 +48,12 @@
                       カテゴリー
                       %span.form-require 必須
                     %div
-                      .select-wrap
-                        %select.select-default
-                          %option{value: ""} ---
-                          %option{value: "1"} レディース
-                          %option{value: "2"} メンズ
-                          %option{value: "3"} ベビー・キッズ
-                          %option{value: "4"} インテリア・住まい・小物
-                          %option{value: "5"} 本・音楽・ゲーム
-                          %option{value: "1328"} おもちゃ・ホビー・グッズ
-                          %option{value: "6"} コスメ・香水・美容
-                          %option{value: "7"} 家電・スマホ・カメラ
-                          %option{value: "8"} スポーツ・レジャー
-                          %option{value: "9"} ハンドメイド
-                          %option{value: "1027"} チケット
-                          %option{value: "1318"} 自動車・オートバイ
-                          %option{value: "10"} その他
+                      .select-wrap1
+                        = f.collection_select :category_ids, Category.where(ancestry: nil), :id, :name, {prompt: "---"},{class:"select-default"} 
                         = fa_icon "fas", class: "fa-angle-down"
+                      .select-wrap2
+                      .select-wrap3
+
                   .form-group
                     %label
                       商品の状態
@@ -107,17 +98,17 @@
                   %ul.sell-price
                     %li.form-group
                       .clearfix
-                        %label.l-left
+                        %label.l-left 
                           価格
                           %span.form-require 必須
-                        .l-right.sell-price-input#product_price
+                        .l-right2.sell-price-input#product_price
                           ¥
                           %div
-                            = f.text_field :price, placeholder: "例）300", value: "#{@product.price}", class: "input-default" ,id:"product_price"
+                            = f.text_field :price, placeholder: "例）300", value: "#{@product.price}", class: "input-default2" ,id:"product_price"
                     %li.clearfix
                       .l-left
                         販売手数料 (10%)
-                      .l-right -
+                      .l-right-10 -
                     %li.clearfix.bold
                       .l-left 販売利益
                       .l-right -
