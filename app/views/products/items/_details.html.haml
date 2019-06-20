@@ -105,10 +105,10 @@
     %li.prev
       = link_to '#' do
         = fa_icon "fas", class: "fa-chevron-left"
-        アルマーニエクスチェンジ
+        Back
     %li.next
       = link_to '#' do
-        littletalks様送料
+        Next
         = fa_icon "fas", class: "fa-chevron-right"
   .item-sns-box
     %ul.sns-box
@@ -121,193 +121,197 @@
       %li.pinterest
         = link_to '#' do
           = fa_icon "fas", class: "fa-pinterest-square"
+  .e
     -if user_signed_in? && @product.saler_id == current_user.id
-      %p.delete-btn
-        = link_to  product_path(@product), class: "gray-delete", method: :delete do
+      = link_to product_path(@product), class: "edit",  method: :delete , data: { confirm: '本当に削除しますか？' }  do
+        .delete-btn2
           この商品を削除する
+      = link_to edit_product_path, class: "edit" do
+        .delete-btn2
+          この商品を編集する
       
-  %h2
-    = link_to '#' do
-      Siaさんのその他の出品
-  %section.item-_other_box
-    .other_items
-      = link_to '#' do
-        .other_item
-          .other_item-img
-            = image_tag("https://static.mercdn.net/thumb/photos/m58136755934_1.jpg?1559516733", class: "other-photos")
-          .other_item-description
-            %h3.ohter_item_name
-              デニム サロペット オーバーオール
-            .other_item_num
-              .other_item_price
-                ¥ 2,500
-              .other_item_font
-                = fa_icon "fas", class: "fa-heart-o"
-                2
-            %p.other_item-tax
-              (税込)          
-      .other_item
-        .other_item-img
-          = image_tag("https://static.mercdn.net/thumb/photos/m31394071559_1.jpg?1557612331", class: "other-photos")
-        .other_item-description
-          %h3.ohter_item_name
-            くまのプーさんぬいぐるみ
-          .other_item_num
-            .other_item_price
-              ¥ 2,500
-            .other_item_font
-              = fa_icon "fas", class: "fa-heart-o"
-              2
-          %p.other_item-tax
-            (税込)
-      .other_item
-        .other_item-img
-          = image_tag("https://static.mercdn.net/thumb/photos/m99547753049_1.jpg?1557554636", class: "other-photos")
-        .other_item-description
-          %h3.ohter_item_name
-            ミッキー ミニー ぬいぐるみバッジ
-          .other_item_num
-            .other_item_price
-              ¥ 2,500
-            .other_item_font
-              = fa_icon "fas", class: "fa-heart-o"
-              2
-          %p.other_item-tax
-            (税込)
-  %section.item-_other_box
-    .other_items
-      .other_item
-        .other_item-img
-          = image_tag("https://static.mercdn.net/thumb/photos/m70101439872_1.jpg?1559450567", class: "other-photos")
-        .other_item-description
-          %h3.ohter_item_name
-            美女と野獣 メガネケース
-          .other_item_num
-            .other_item_price
-              ¥ 2,500
-            .other_item_font
-              = fa_icon "fas", class: "fa-heart-o"
-              2
-          %p.other_item-tax
-            (税込)
-      .other_item
-        .other_item-img
-          = image_tag("https://static.mercdn.net/thumb/photos/m52822702747_1.jpg?1559449875", class: "other-photos")
-        .other_item-description
-          %h3.ohter_item_name
-            ディズニー ミニー メガネクロス
-          .other_item_num
-            .other_item_price
-              ¥ 2,500
-            .other_item_font
-              = fa_icon "fas", class: "fa-heart-o"
-              2
-          %p.other_item-tax
-            (税込)
-      .other_item
-        .other_item-img
-          = image_tag("https://static.mercdn.net/thumb/photos/m77264637164_1.jpg?1559446760", class: "other-photos")
-        .other_item-description
-          %h3.ohter_item_name
-            ミッキー ミニー ぬいぐるみ
-          .other_item_num
-            .other_item_price
-              ¥ 2,500
-            .other_item_font
-              = fa_icon "fas", class: "fa-heart-o"
-              2
-          %p.other_item-tax
-            (税込)
-  %h2.item-second-name
-    = link_to '#' do
-      コーチ ショルダーバッグ その他の出品
-  %section.item-_other_box
-    .other_items
-      = link_to '#' do
-        .other_item
-          .other_item-img
-            = image_tag("https://static.mercdn.net/thumb/photos/m58136755934_1.jpg?1559516733", class: "other-photos")
-          .other_item-description
-            %h3.ohter_item_name
-              デニム サロペット オーバーオール
-            .other_item_num
-              .other_item_price
-                ¥ 2,500
-              .other_item_font
-                = fa_icon "fas", class: "fa-heart-o"
-                2
-            %p.other_item-tax
-              (税込)          
-      .other_item
-        .other_item-img
-          = image_tag("https://static.mercdn.net/thumb/photos/m31394071559_1.jpg?1557612331", class: "other-photos")
-        .other_item-description
-          %h3.ohter_item_name
-            くまのプーさんぬいぐるみ
-          .other_item_num
-            .other_item_price
-              ¥ 2,500
-            .other_item_font
-              = fa_icon "fas", class: "fa-heart-o"
-              2
-          %p.other_item-tax
-            (税込)
-      .other_item
-        .other_item-img
-          = image_tag("https://static.mercdn.net/thumb/photos/m99547753049_1.jpg?1557554636", class: "other-photos")
-        .other_item-description
-          %h3.ohter_item_name
-            ミッキー ミニー ぬいぐるみバッジ
-          .other_item_num
-            .other_item_price
-              ¥ 2,500
-            .other_item_font
-              = fa_icon "fas", class: "fa-heart-o"
-              2
-          %p.other_item-tax
-            (税込)
-  %section.item-_other_box
-    .other_items
-      .other_item
-        .other_item-img
-          = image_tag("https://static.mercdn.net/thumb/photos/m70101439872_1.jpg?1559450567", class: "other-photos")
-        .other_item-description
-          %h3.ohter_item_name
-            美女と野獣 メガネケース
-          .other_item_num
-            .other_item_price
-              ¥ 2,500
-            .other_item_font
-              = fa_icon "fas", class: "fa-heart-o"
-              2
-          %p.other_item-tax
-            (税込)
-      .other_item
-        .other_item-img
-          = image_tag("https://static.mercdn.net/thumb/photos/m52822702747_1.jpg?1559449875", class: "other-photos")
-        .other_item-description
-          %h3.ohter_item_name
-            ディズニー ミニー メガネクロス
-          .other_item_num
-            .other_item_price
-              ¥ 2,500
-            .other_item_font
-              = fa_icon "fas", class: "fa-heart-o"
-              2
-          %p.other_item-tax
-            (税込)
-      .other_item
-        .other_item-img
-          = image_tag("https://static.mercdn.net/thumb/photos/m77264637164_1.jpg?1559446760", class: "other-photos")
-        .other_item-description
-          %h3.ohter_item_name
-            ミッキー ミニー ぬいぐるみ
-          .other_item_num
-            .other_item_price
-              ¥ 2,500
-            .other_item_font
-              = fa_icon "fas", class: "fa-heart-o"
-              2
-          %p.other_item-tax
-            (税込)
+  -# %h2
+  -#   = link_to '#' do
+  -#     Siaさんのその他の出品
+  -# %section.item-_other_box
+  -#   .other_items
+  -#     = link_to '#' do
+  -#       .other_item
+  -#         .other_item-img
+  -#           = image_tag("https://static.mercdn.net/thumb/photos/m58136755934_1.jpg?1559516733", class: "other-photos")
+  -#         .other_item-description
+  -#           %h3.ohter_item_name
+  -#             デニム サロペット オーバーオール
+  -#           .other_item_num
+  -#             .other_item_price
+  -#               ¥ 2,500
+  -#             .other_item_font
+  -#               = fa_icon "fas", class: "fa-heart-o"
+  -#               2
+  -#           %p.other_item-tax
+  -#             (税込)          
+  -#     .other_item
+  -#       .other_item-img
+  -#         = image_tag("https://static.mercdn.net/thumb/photos/m31394071559_1.jpg?1557612331", class: "other-photos")
+  -#       .other_item-description
+  -#         %h3.ohter_item_name
+  -#           くまのプーさんぬいぐるみ
+  -#         .other_item_num
+  -#           .other_item_price
+  -#             ¥ 2,500
+  -#           .other_item_font
+  -#             = fa_icon "fas", class: "fa-heart-o"
+  -#             2
+  -#         %p.other_item-tax
+  -#           (税込)
+  -#     .other_item
+  -#       .other_item-img
+  -#         = image_tag("https://static.mercdn.net/thumb/photos/m99547753049_1.jpg?1557554636", class: "other-photos")
+  -#       .other_item-description
+  -#         %h3.ohter_item_name
+  -#           ミッキー ミニー ぬいぐるみバッジ
+  -#         .other_item_num
+  -#           .other_item_price
+  -#             ¥ 2,500
+  -#           .other_item_font
+  -#             = fa_icon "fas", class: "fa-heart-o"
+  -#             2
+  -#         %p.other_item-tax
+  -#           (税込)
+  -# %section.item-_other_box
+  -#   .other_items
+  -#     .other_item
+  -#       .other_item-img
+  -#         = image_tag("https://static.mercdn.net/thumb/photos/m70101439872_1.jpg?1559450567", class: "other-photos")
+  -#       .other_item-description
+  -#         %h3.ohter_item_name
+  -#           美女と野獣 メガネケース
+  -#         .other_item_num
+  -#           .other_item_price
+  -#             ¥ 2,500
+  -#           .other_item_font
+  -#             = fa_icon "fas", class: "fa-heart-o"
+  -#             2
+  -#         %p.other_item-tax
+  -#           (税込)
+  -#     .other_item
+  -#       .other_item-img
+  -#         = image_tag("https://static.mercdn.net/thumb/photos/m52822702747_1.jpg?1559449875", class: "other-photos")
+  -#       .other_item-description
+  -#         %h3.ohter_item_name
+  -#           ディズニー ミニー メガネクロス
+  -#         .other_item_num
+  -#           .other_item_price
+  -#             ¥ 2,500
+  -#           .other_item_font
+  -#             = fa_icon "fas", class: "fa-heart-o"
+  -#             2
+  -#         %p.other_item-tax
+  -#           (税込)
+  -#     .other_item
+  -#       .other_item-img
+  -#         = image_tag("https://static.mercdn.net/thumb/photos/m77264637164_1.jpg?1559446760", class: "other-photos")
+  -#       .other_item-description
+  -#         %h3.ohter_item_name
+  -#           ミッキー ミニー ぬいぐるみ
+  -#         .other_item_num
+  -#           .other_item_price
+  -#             ¥ 2,500
+  -#           .other_item_font
+  -#             = fa_icon "fas", class: "fa-heart-o"
+  -#             2
+  -#         %p.other_item-tax
+  -#           (税込)
+  -# %h2.item-second-name
+  -#   = link_to '#' do
+  -#     コーチ ショルダーバッグ その他の出品
+  -# %section.item-_other_box
+  -#   .other_items
+  -#     = link_to '#' do
+  -#       .other_item
+  -#         .other_item-img
+  -#           = image_tag("https://static.mercdn.net/thumb/photos/m58136755934_1.jpg?1559516733", class: "other-photos")
+  -#         .other_item-description
+  -#           %h3.ohter_item_name
+  -#             デニム サロペット オーバーオール
+  -#           .other_item_num
+  -#             .other_item_price
+  -#               ¥ 2,500
+  -#             .other_item_font
+  -#               = fa_icon "fas", class: "fa-heart-o"
+  -#               2
+  -#           %p.other_item-tax
+  -#             (税込)          
+  -#     .other_item
+  -#       .other_item-img
+  -#         = image_tag("https://static.mercdn.net/thumb/photos/m31394071559_1.jpg?1557612331", class: "other-photos")
+  -#       .other_item-description
+  -#         %h3.ohter_item_name
+  -#           くまのプーさんぬいぐるみ
+  -#         .other_item_num
+  -#           .other_item_price
+  -#             ¥ 2,500
+  -#           .other_item_font
+  -#             = fa_icon "fas", class: "fa-heart-o"
+  -#             2
+  -#         %p.other_item-tax
+  -#           (税込)
+  -#     .other_item
+  -#       .other_item-img
+  -#         = image_tag("https://static.mercdn.net/thumb/photos/m99547753049_1.jpg?1557554636", class: "other-photos")
+  -#       .other_item-description
+  -#         %h3.ohter_item_name
+  -#           ミッキー ミニー ぬいぐるみバッジ
+  -#         .other_item_num
+  -#           .other_item_price
+  -#             ¥ 2,500
+  -#           .other_item_font
+  -#             = fa_icon "fas", class: "fa-heart-o"
+  -#             2
+  -#         %p.other_item-tax
+  -#           (税込)
+  -# %section.item-_other_box
+  -#   .other_items
+  -#     .other_item
+  -#       .other_item-img
+  -#         = image_tag("https://static.mercdn.net/thumb/photos/m70101439872_1.jpg?1559450567", class: "other-photos")
+  -#       .other_item-description
+  -#         %h3.ohter_item_name
+  -#           美女と野獣 メガネケース
+  -#         .other_item_num
+  -#           .other_item_price
+  -#             ¥ 2,500
+  -#           .other_item_font
+  -#             = fa_icon "fas", class: "fa-heart-o"
+  -#             2
+  -#         %p.other_item-tax
+  -#           (税込)
+  -#     .other_item
+  -#       .other_item-img
+  -#         = image_tag("https://static.mercdn.net/thumb/photos/m52822702747_1.jpg?1559449875", class: "other-photos")
+  -#       .other_item-description
+  -#         %h3.ohter_item_name
+  -#           ディズニー ミニー メガネクロス
+  -#         .other_item_num
+  -#           .other_item_price
+  -#             ¥ 2,500
+  -#           .other_item_font
+  -#             = fa_icon "fas", class: "fa-heart-o"
+  -#             2
+  -#         %p.other_item-tax
+  -#           (税込)
+  -#     .other_item
+  -#       .other_item-img
+  -#         = image_tag("https://static.mercdn.net/thumb/photos/m77264637164_1.jpg?1559446760", class: "other-photos")
+  -#       .other_item-description
+  -#         %h3.ohter_item_name
+  -#           ミッキー ミニー ぬいぐるみ
+  -#         .other_item_num
+  -#           .other_item_price
+  -#             ¥ 2,500
+  -#           .other_item_font
+  -#             = fa_icon "fas", class: "fa-heart-o"
+  -#             2
+  -#         %p.other_item-tax
+  -#           (税込)
             
