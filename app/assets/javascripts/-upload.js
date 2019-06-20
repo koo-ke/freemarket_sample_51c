@@ -1,6 +1,7 @@
-$(document).on('turbolinks:render', function(){
+$(document).on('turbolinks:load', function(){
 
 $(function(){
+  
   $fileField = $('#file')
  
   // 選択された画像を取得し表示
@@ -23,5 +24,17 @@ $(function(){
     reader.readAsDataURL(file);
   });
 });
+
+$(function() {
+  $(".remove_btn").on("click", function() {
+    $(this).parent().remove();
+  });
+
+  $(".remove_btn").on("click", function() {
+    $("#img_field_img").empty();
+  });
+
+});
+
 
 });
