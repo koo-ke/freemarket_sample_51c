@@ -75,6 +75,7 @@ $(".input-default2").on("keyup", function() {
   });
 
   $(".select-wrap2").on("change", function() {
+    $(".select-wrap3").empty();
     var childrenValue = document.getElementById("child_category_ids2").value;
       $.ajax({
         url: '/products/search',
